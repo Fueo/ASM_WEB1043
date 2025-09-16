@@ -1,0 +1,45 @@
+:root {
+    --gray: #43454D;
+    --white: #FFFFFF;
+    --black: #000000;
+    --white-gray: #F5F5F5;
+    --article-text: #909090;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    line-height: 1.6rem;
+}
+
+.grid {
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex {
+    display: flex;
+}
+
+
+@media (375px <=width <=1024px) {
+    html {
+        font-size: 7.6px;
+        line-height: 0.8rem;
+    }
+}

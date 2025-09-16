@@ -1,0 +1,94 @@
+header {
+    width: 100%;
+    height: 88px;
+    background-color: var(--white);
+    align-items: center;
+    display: flex;
+    gap: 3.9%;
+    padding: 0px 11%;
+    box-sizing: border-box;
+}
+
+header .logo img {
+    width: 100%;
+}
+
+header .search-group {
+    background-color: var(--white-gray);
+    width: 33%;
+    padding: 16px;
+    height: 56px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+header .search-group img {
+    width: 16px;
+    height: 16px;
+}
+
+header .search-group input {
+    border: none;
+    background: none;
+    margin-left: 12px;
+    font-weight: medium;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #656565;
+    width: 90%;
+}
+
+header .search-group input:focus {
+    outline: none;
+}
+
+
+
+header .navlink-group ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .nav-item {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--black);
+    opacity: 30%;
+}
+
+header .nav-item:hover {
+    opacity: 100%;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+header .navlink-group .active {
+    opacity: 100%;
+    ;
+}
+
+header .icon-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+header .icon-group .icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 70%;
+}
+
+header .icon-group .icon:hover {
+    opacity: 100%;
+    transition: all 0.5s ease-in-out;
+}
