@@ -1,0 +1,34 @@
+.btn {
+    width: fit-content;
+    padding: 1.6rem 5.6rem;
+    border-radius: 0.6rem;
+    background: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    opacity: 80%;
+}
+
+.btn:hover {
+    opacity: 90%;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-black {
+    border: 1px solid var(--black);
+    color: var(--black);
+}
+
+.btn-fill-black {
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.btn-white {
+
+    border: 1px solid var(--white);
+    color: var(--white);
+}

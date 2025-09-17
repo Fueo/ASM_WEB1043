@@ -17,6 +17,10 @@ html {
     line-height: 1.6rem;
 }
 
+button {
+    padding: 0px;
+}
+
 .grid {
     width: 1440px;
     max-width: 100%;
@@ -34,6 +38,37 @@ html {
 
 .flex {
     display: flex;
+}
+
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.gap-16 {
+    gap: 16px;
+}
+
+.gap-24 {
+    gap: 24px;
+}
+
+.px-32 {
+    padding: 0 3.2rem;
 }
 
 

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +21,7 @@
 
 <body>
     <div class="grid">
-        <header>
+        <header class="flex">
             <a href="#" class="logo">
                 <img src="img/logo_header.png" alt="logo">
             </a>
@@ -43,52 +45,54 @@
             </div>
         </header>
 
-        <section class="banner">
-            <div class="banner-content">
+        <section class="banner flex">
+            <div class="banner-content flex-col justify-center">
                 <div>Pro.Beyond.</div>
-                <div>IPhone 14 <b>Pro</b></div>
+                <div class="banner-title">IPhone 14 <b class="banner-title">Pro</b></div>
                 <div>Created to change everything for the better. For everyone</div>
-                <button>Shop now</button>
+                <button class="btn btn-white">Shop now</button>
             </div>
             <img src="img/banner.png" alt="banner">
         </section>
 
-        <section class="featured-products">
+        <section class="featured-products flex">
             <div class="left">
-                <div class="top-left">
+                <div class="top-left flex">
                     <img src="img/banner_img1.png" alt="featured1">
-                    <div>
+                    <div class="flex-col">
                         <div>Playstation 5</div>
-                        <div>Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O will redefine your
+                        <div class="subtitle">Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O will
+                            redefine your
                             PlayStation experience.</div>
                     </div>
                 </div>
-                <div class="bot-left">
-                    <div class="left-bot">
+                <div class="bot-left flex">
+                    <div class="left-bot flex">
                         <img src="img/banner_img2.png" alt="featured2">
-                        <div>
-                            <div>Apple AirPods <b>Max</b>
+                        <div class="flex-col">
+                            <div class="title">Apple AirPods <b>Max</b>
                             </div>
-                            <div>Computational audio. Listen, it's powerful</div>
+                            <div class="subtitle">Computational audio. Listen, it's powerful</div>
                         </div>
                     </div>
-                    <div class="right-bot">
+                    <div class="right-bot flex">
                         <img src="img/banner_img3.png" alt="featured3">
-                        <div>
-                            <div>Apple Vision <b>Pro</b>
+                        <div class="flex-col">
+                            <div class="title">Apple Vision <b>Pro</b>
                             </div>
-                            <div>An immersive way to experience entertainment</div>
+                            <div class="subtitle">An immersive way to experience entertainment</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="right">
-                <div>
-                    <div>Macbook<b>Air</b>
+            <div class="right flex">
+                <div class="flex-col">
+                    <div>Macbook <b>Air</b>
                     </div>
-                    <div>The new 15‑inch MacBook Air makes room for more of what you love with a spacious Liquid Retina
+                    <div class="subtitle">The new 15‑inch MacBook Air makes room for more of what you love with a
+                        spacious Liquid Retina
                         display.</div>
-                    <button>Shop now</button>
+                    <button class="btn btn-black">Shop now</button>
                 </div>
                 <div class="right-img">
                     <img src="img/banner_img5.png" alt="featured4">
@@ -98,7 +102,7 @@
         </section>
 
         <section class="category-section">
-            <div class="category-title">
+            <div class="category-title flex">
                 <h2>Browse By Category</h2>
 
                 <div>
@@ -108,28 +112,28 @@
             </div>
             <div class="category-nav">
 
-                <div class="category-list">
-                    <div class="category-item">
+                <div class="category-list flex flex-center">
+                    <div class="category-item flex-col flex-center">
                         <img src="img/phone.png">
                         <span>Phones</span>
                     </div>
-                    <div class="category-item">
+                    <div class="category-item flex-col flex-center">
                         <img src="img/watches.png">
                         <span>Smart Watches</span>
                     </div>
-                    <div class="category-item">
+                    <div class="category-item flex-col flex-center">
                         <img src="img/camera.png">
                         <span>Cameras</span>
                     </div>
-                    <div class="category-item">
+                    <div class="category-item flex-col flex-center">
                         <img src="img/headphone.png">
                         <span>Headphones</span>
                     </div>
-                    <div class="category-item">
+                    <div class="category-item flex-col flex-center">
                         <img src="img/computer.png">
                         <span>Computers</span>
                     </div>
-                    <div class="category-item">
+                    <div class="category-item flex-col flex-center">
                         <img src="img/gaming.png">
                         <span>Gaming</span>
                     </div>
@@ -137,6 +141,227 @@
 
             </div>
         </section>
+        <section class="product-tabs">
+            <div class="tabs flex">
+                <button class="tab-item active">New Arrival</button>
+                <button class="tab-item">Bestseller</button>
+                <button class="tab-item">Featured Products</button>
+            </div>
+            <div class="product-grid flex">
+                <div class="product-card flex-col flex-center">
+                    <button class="fav-btn"><img src="img/like.png" alt="Favorite"></button>
+                    <div class="image">
+                        <img src="img/products/ipad.png" alt="Apple iPad 9">
+                    </div>
+                    <div class="product-title">Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021</div>
+                    <div class="product-price">$398</div>
+                    <button class="btn btn-fill-black">Buy Now</button>
+                </div>
+                <div class="product-card flex-col flex-center">
+                    <button class="fav-btn"><img src="img/like.png" alt="Favorite"></button>
+                    <div class="image">
+                        <img src="img/products/ipad.png" alt="Apple iPad 9">
+                    </div>
+                    <div class="product-title">Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021</div>
+                    <div class="product-price">$398</div>
+                    <button class="btn btn-fill-black">Buy Now</button>
+                </div>
+                <div class="product-card flex-col flex-center">
+                    <button class="fav-btn"><img src="img/like.png" alt="Favorite"></button>
+                    <div class="image">
+                        <img src="img/products/ipad.png" alt="Apple iPad 9">
+                    </div>
+                    <div class="product-title">Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021</div>
+                    <div class="product-price">$398</div>
+                    <button class="btn btn-fill-black">Buy Now</button>
+                </div>
+                <div class="product-card flex-col flex-center">
+                    <button class="fav-btn"><img src="img/like.png" alt="Favorite"></button>
+                    <div class="image">
+                        <img src="img/products/ipad.png" alt="Apple iPad 9">
+                    </div>
+                    <div class="product-title">Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021</div>
+                    <div class="product-price">$398</div>
+                    <button class="btn btn-fill-black">Buy Now</button>
+                </div>
+                <div class="product-card flex-col flex-center">
+                    <button class="fav-btn"><img src="img/like.png" alt="Favorite"></button>
+                    <div class="image">
+                        <img src="img/products/ipad.png" alt="Apple iPad 9">
+                    </div>
+                    <div class="product-title">Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021</div>
+                    <div class="product-price">$398</div>
+                    <button class="btn btn-fill-black">Buy Now</button>
+                </div>
+                <div class="product-card flex-col flex-center">
+                    <button class="fav-btn"><img src="img/like.png" alt="Favorite"></button>
+                    <div class="image">
+                        <img src="img/products/ipad.png" alt="Apple iPad 9">
+                    </div>
+                    <div class="product-title">Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021</div>
+                    <div class="product-price">$398</div>
+                    <button class="btn btn-fill-black">Buy Now</button>
+                </div>
+                <div class="product-card flex-col flex-center">
+                    <button class="fav-btn"><img src="img/like.png" alt="Favorite"></button>
+                    <div class="image">
+                        <img src="img/products/ipad.png" alt="Apple iPad 9">
+                    </div>
+                    <div class="product-title">Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021</div>
+                    <div class="product-price">$398</div>
+                    <button class="btn btn-fill-black">Buy Now</button>
+                </div>
+                <div class="product-card flex-col flex-center">
+                    <button class="fav-btn"><img src="img/like.png" alt="Favorite"></button>
+                    <div class="image">
+                        <img src="img/products/ipad.png" alt="Apple iPad 9">
+                    </div>
+                    <div class="product-title">Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021</div>
+                    <div class="product-price">$398</div>
+                    <button class="btn btn-fill-black">Buy Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-products flex">
+            <div class="popular-card flex-col">
+                <div class="image">
+                    <img src="img/products/popular1.png" alt="Popular Products">
+
+                </div>
+                <div class="popular-info flex-col">
+                    <h3>Popular Products</h3>
+                    <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and
+                        ease of use.</p>
+                    <button class="btn btn-black">Shop Now</button>
+                </div>
+            </div>
+            <div class="popular-card popular-light">
+                <div class="image">
+                    <img src="img/products/popular2.png" alt="Popular Products">
+
+                </div>
+                <div class="popular-info flex-col">
+                    <h3>Popular Products</h3>
+                    <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and
+                        ease of use.</p>
+                    <button class="btn btn-black">Shop Now</button>
+                </div>
+            </div>
+            <div class="popular-card popular-gray">
+                <div class="image">
+                    <img src="img/products/popular3.png" alt="Popular Products">
+
+                </div>
+                <div class="popular-info flex-col">
+                    <h3>Popular Products</h3>
+                    <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and
+                        ease of use.</p>
+                    <button class="btn btn-black">Shop Now</button>
+                </div>
+            </div>
+            <div class="popular-card popular-dark">
+                <div class="image">
+                    <img src="img/products/popular4.png" alt="Popular Products">
+
+                </div>
+                <div class="popular-info flex-col">
+                    <h3>Popular Products</h3>
+                    <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and
+                        ease of use.</p>
+                    <button class="btn btn-white">Shop Now</button>
+                </div>
+            </div>
+        </section>
+        <section class="product-tabs">
+            <div class="tabs">
+                <button class="tab-item active">Discounts up to -50%</button>
+            </div>
+            <div class="product-grid flex">
+                <div class="product-card flex-col flex-center">
+                    <button class="fav-btn"><img src="img/like.png" alt="Favorite"></button>
+                    <div class="image">
+                        <img src="img/products/ipad.png" alt="Apple iPad 9">
+                    </div>
+                    <div class="product-title">Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021</div>
+                    <div class="product-price">$398</div>
+                    <button class="btn btn-fill-black">Buy Now</button>
+                </div>
+                <div class="product-card flex-col flex-center">
+                    <button class="fav-btn"><img src="img/like.png" alt="Favorite"></button>
+                    <div class="image">
+                        <img src="img/products/ipad.png" alt="Apple iPad 9">
+                    </div>
+                    <div class="product-title">Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021</div>
+                    <div class="product-price">$398</div>
+                    <button class="btn btn-fill-black">Buy Now</button>
+                </div>
+                <div class="product-card flex-col flex-center">
+                    <button class="fav-btn"><img src="img/like.png" alt="Favorite"></button>
+                    <div class="image">
+                        <img src="img/products/ipad.png" alt="Apple iPad 9">
+                    </div>
+                    <div class="product-title">Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021</div>
+                    <div class="product-price">$398</div>
+                    <button class="btn btn-fill-black">Buy Now</button>
+                </div>
+                <div class="product-card flex-col flex-center">
+                    <button class="fav-btn"><img src="img/like.png" alt="Favorite"></button>
+                    <div class="image">
+                        <img src="img/products/ipad.png" alt="Apple iPad 9">
+                    </div>
+                    <div class="product-title">Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021</div>
+                    <div class="product-price">$398</div>
+                    <button class="btn btn-fill-black">Buy Now</button>
+                </div>
+            </div>
+        </section>
+        <section class="banner2 flex-col flex-center">
+            <div class="title">Big Summer <b>Sale</b></div>
+            <div class="desc">Commodo fames vitae vitae leo mauris in. Eu consequat.</div>
+            <button class="btn btn-white">Shop Now</button>
+        </section>
+        <footer>
+            <div class="footer-content flex">
+                <div class="footer-col flex-col">
+                    <div class="footer-title">
+                        <img src="img/logo.png" alt="logo">
+                    </div>
+                    <p>We are a residential interior design firm located in Portland. Our boutique-studio offers more
+                        than
+                    </p>
+                </div>
+                <div class="footer-col flex-col">
+                    <div class="footer-title">Services</div>
+                    <ul>
+                        <li>Bonus program</li>
+                        <li>Gift cards</li>
+                        <li>Credit and payment</li>
+                        <li>Service contracts</li>
+                        <li>Non-cash account</li>
+                        <li>Payment</li>
+                    </ul>
+                </div>
+                <div class="footer-col flex-col">
+                    <div class="footer-title">Assistance to the buyer</div>
+                    <ul>
+                        <li>Find an order</li>
+                        <li>Terms of delivery</li>
+                        <li>Exchange and return of goods</li>
+                        <li>Guarantee</li>
+                        <li>Frequently asked questions</li>
+                        <li>Terms of use of the site</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/Tiktok.png" alt="Tiktok"></a>
+                <a href="#"><img src="img/Instagram.png" alt="Instagram"></a>
+
+            </div>
+        </footer>
     </div>
 
 </body>
