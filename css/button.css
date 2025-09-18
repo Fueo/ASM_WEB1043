@@ -4,10 +4,21 @@
     border-radius: 0.6rem;
     background: none;
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     outline: none;
-    opacity: 80%;
+    opacity: 100%;
+}
+
+.btn-full {
+    width: 80%;
+}
+
+.btn-buy {
+    width: 95%;
+    padding: 0;
+    height: 48px;
+    border-radius: 0.8rem;
 }
 
 .btn:hover {

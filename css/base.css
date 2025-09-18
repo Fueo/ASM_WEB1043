@@ -72,9 +72,4 @@ button {
 }
 
 
-@media (375px <=width <=1024px) {
-    html {
-        font-size: 7.6px;
-        line-height: 0.8rem;
-    }
-}
+@media (375px <=width <=1024px) {}
