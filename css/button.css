@@ -1,21 +1,24 @@
 .btn {
-    width: fit-content;
-    padding: 1.6rem 5.6rem;
-    border-radius: 0.6rem;
     background: none;
     font-size: 1.6rem;
     font-weight: 500;
     cursor: pointer;
     outline: none;
-    opacity: 100%;
+}
+
+.btn-banner {
+    width: fit-content;
+    padding: 1.6rem 5.6rem;
+    border-radius: 0.6rem;
 }
 
 .btn-full {
     width: 80%;
+    border-radius: 0.6rem;
 }
 
 .btn-buy {
-    width: 95%;
+    width: 85%;
     padding: 0;
     height: 48px;
     border-radius: 0.8rem;
@@ -39,7 +42,12 @@
 }
 
 .btn-white {
-
     border: 1px solid var(--white);
     color: var(--white);
+}
+
+@media screen and (max-width: 768px) {
+    .btn-buy {
+        width: 95%;
+    }
 }

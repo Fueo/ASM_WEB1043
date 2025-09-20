@@ -35,7 +35,7 @@ const changeContext = (index) => {
             <div class="popular-info flex-col">
             <h3>${item[1]}</h3>
             <p>${item[2]}</p>
-            <button class="btn btn-black">Shop now</button>
+            <button class="btn btn-black btn-banner">Shop now</button>
             </div>
         `
     }).join("");

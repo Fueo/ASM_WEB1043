@@ -30,21 +30,38 @@
                 <input type="text" placeholder="Search">
             </div>
             <nav class="navlink-group">
-                <ul>
+                <ul class="gap-32">
                     <li><a href="#" class="active nav-item">Home</a></li>
-                    <li><a href="#" class="nav-item">About</a></li>
-                    <li><a href="#" class="nav-item">Contact Us</a></li>
-                    <li><a href="#" class="nav-item">Blog</a></li>
+                    <li><a href="#" class="nav-item header-category">Products</a></li>
                 </ul>
 
             </nav>
-            <div class="icon-group flex">
-                <a href="#" class="icon flex flex-center"> <img src="img/favorite_icon.png" /> </a>
-                <a href="#" class="icon flex flex-center"> <img src="img/cart-icon.png" /> </a>
-                <a href="#" class="icon flex flex-center"> <img src="img/user-icon.png" /> </a>
+            <div class="icon-group gap-24 flex">
+                <a href="#" class="icon flex flex-center">
+                    <img src="img/cart-icon.png" />
+                    <div class="badge">1</div>
+                </a>
+                <div href="#" class="icon flex flex-center" onclick="toggleUserBlock()">
+                    <img src="img/user-icon.png" />
+                    <div class="user_block">
+                        <div class="not_logged_in">
+                            <ul>
+                                <li><a href="#" class="">Log in</a></li>
+                                <li><a href="#" class="">Sign up</a></li>
+                            </ul>
+                        </div>
+                        <div class="logged_in">
+                            <ul>
+                                <li><a href="#" class="">Profile</a></li>
+                                <li><a href="#" class="">Log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="menu">
                 <img src="img/menu-bar.png" alt="menu-icon" onclick="toggleMenu()">
+                <div class="badge">1</div>
                 <div class="mobile-menu flex-col">
                     <div class="flex">
                         <a href="#" class="logo">
@@ -57,24 +74,44 @@
                         <img src="img/search_icon.png" alt="search-icon">
                         <input type="text" placeholder="Search">
                     </div>
-                    <ul class="nav-group flex-col">
+                    <ul class="nav-group gap-16 flex-col">
                         <li>
-                            <a href="#" class="item active">
-                                <div class="icon-image"><img src="img/home.png"></div>Home
+                            <a href="#" class="item gap-16 active">
+                                <div class="icon-image flex flex-center"><img src="img/home.png"></div>Home
                             </a>
                         </li>
+                        <li>
+                            <a href="#" class="item gap-16">
+                                <div class="icon-image flex flex-center"><img src="img/product.png"></div>Products
+                            </a>
                         </li>
-                        <li><a href="#" class="item">
-                                <div class="icon-image"><img src="img/favorite_icon.png"></div>Favorite
+                        <li><a href="#" class="item gap-16">
+                                <div class="icon-image flex flex-center"><img src="img/cart-icon.png"></div>Cart
+                                <div class="badge badge-mobile">1</div>
                             </a></li>
-                        <li><a href="#" class="item">
-                                <div class="icon-image"><img src="img/cart-icon.png"></div>Cart
-                            </a></li>
-                        <li><a href="#" class="item">
-                                <div class="icon-image"><img src="img/user-icon.png"></div>User
-                            </a></li>
+                        <li>
+                            <div href="#" class="item gap-16 account_mobile" onclick="toggleUserBlock()">
+                                <div class="icon-image flex flex-center"><img src="img/user-icon.png"></div>User
+                                <div class="arrow-account">&#129170;</div>
+                            </div>
+                        </li>
+                        <div class="user_block user_block_mobile">
+                            <div class="not_logged_in">
+                                <ul>
+                                    <li><a href="#" class="">Log in</a></li>
+                                    <li><a href="#" class="">Sign up</a></li>
+                                </ul>
+                            </div>
+                            <div class="logged_in">
+                                <ul>
+                                    <li><a href="#" class="">Profile</a></li>
+                                    <li><a href="#" class="">Log out</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </ul>
-                    <div class="contact-us flex flex-center">
+
+                    <div class="contact-us gap-16 flex flex-center">
                         <a href="#"><img src="img/Twitter-menu.png" alt="Twitter"></a>
                         <a href="#"><img src="img/facebook-menu.png" alt="Facebook"></a>
                         <a href="#"><img src="img/Tiktok-menu.png" alt="Tiktok"></a>
@@ -82,8 +119,6 @@
                     </div>
                 </div>
             </div>
-
-
         </header>
 
         <section class="banner flex">
@@ -91,7 +126,7 @@
                 <div>Pro.Beyond.</div>
                 <div class="banner-title">IPhone 14 <b class="banner-title">Pro</b></div>
                 <div>Created to change everything for the better. For everyone</div>
-                <button class="btn btn-white">Shop now</button>
+                <button class="btn btn-white btn-banner">Shop now</button>
             </div>
             <img class="pc" src="img/banner.png" alt="banner">
             <img class="mobile" src="img/banner-mobile.png" alt="banner">
@@ -134,7 +169,7 @@
                     <div class="subtitle">The new 15‑inch MacBook Air makes room for more of what you love with a
                         spacious Liquid Retina
                         display.</div>
-                    <button class="btn btn-black">Shop now</button>
+                    <button class="btn btn-black btn-banner">Shop now</button>
                 </div>
 
                 <div class="right-img">
@@ -243,7 +278,7 @@
                     <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking
                         and
                         ease of use.</p>
-                    <button class="btn btn-black">Shop Now</button>
+                    <button class="btn btn-black btn-banner">Shop Now</button>
                 </div>
             </div>
             <div class="popular-card popular-light">
@@ -256,7 +291,7 @@
                     <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking
                         and
                         ease of use.</p>
-                    <button class="btn btn-black">Shop Now</button>
+                    <button class="btn btn-black btn-banner">Shop Now</button>
                 </div>
             </div>
             <div class="popular-card popular-gray">
@@ -269,7 +304,7 @@
                     <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking
                         and
                         ease of use.</p>
-                    <button class="btn btn-black">Shop Now</button>
+                    <button class="btn btn-black btn-banner">Shop Now</button>
                 </div>
             </div>
             <div class="popular-card popular-dark">
@@ -282,7 +317,7 @@
                     <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking
                         and
                         ease of use.</p>
-                    <button class="btn btn-white">Shop Now</button>
+                    <button class="btn btn-white btn-banner">Shop Now</button>
                 </div>
 
             </div>
@@ -298,7 +333,7 @@
                     <p>iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking
                         and
                         ease of use.</p>
-                    <button class="btn btn-black">Shop Now</button>
+                    <button class="btn btn-black btn-banner">Shop Now</button>
                 </div>
             </div>
 
@@ -325,7 +360,7 @@
         <section class="banner2 flex-col flex-center">
             <div class="title">Big Summer <b>Sale</b></div>
             <div class="desc">Commodo fames vitae vitae leo mauris in. Eu consequat.</div>
-            <button class="btn btn-white">Shop Now</button>
+            <button class="btn btn-white btn-banner">Shop Now</button>
         </section>
         <footer>
             <div class="footer-content flex">
@@ -375,5 +410,7 @@
 <script src="js/product.js"></script>
 <script src="js/slide.js"></script>
 <script src="js/menu.js"></script>
+<script src="js/header_account.js"></script>
+<script src="js/header_cart.js"></script>
 
 </html>

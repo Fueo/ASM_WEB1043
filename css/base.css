@@ -59,6 +59,14 @@ button {
     justify-content: center;
 }
 
+.gap-12 {
+    gap: 12px;
+}
+
+.gap-32 {
+    gap: 32px;
+}
+
 .gap-16 {
     gap: 16px;
 }

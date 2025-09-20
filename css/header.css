@@ -3,13 +3,11 @@ header {
     height: 88px;
     background-color: var(--white);
     align-items: center;
-    gap: 5%;
+    margin: 0 auto;
     padding: 0px 11%;
-    box-sizing: border-box;
     position: fixed;
     z-index: 9999;
     top: 0;
-
 }
 
 header .logo img {
@@ -18,7 +16,6 @@ header .logo img {
 
 header .search-group {
     background-color: var(--white-gray);
-    width: 33%;
     padding: 16px;
     height: 56px;
     border-radius: 8px;
@@ -49,7 +46,6 @@ header .search-group input:focus {
 header .navlink-group ul {
     display: flex;
     justify-content: center;
-    gap: 30px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -75,14 +71,85 @@ header .navlink-group .active {
 
 header .icon-group {
     align-items: center;
-    gap: 24px;
+    position: relative;
 }
 
-header .icon-group .icon {
+header .badge,
+header .badge-mobile {
+    background-color: red;
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 26px;
+    top: -8px;
+}
+
+header .badge-mobile {
+    left: 20px;
+    top: 0px;
+}
+
+header .icon-group>.icon {
     width: 32px;
     height: 32px;
     cursor: pointer;
-    opacity: 70%;
+    opacity: 100%;
+    background-color: #dddddd;
+    padding: 5px;
+    box-sizing: content-box;
+    border-radius: 50%;
+}
+
+header .user_block {
+    display: none;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    opacity: 100%;
+    bottom: -150%;
+    right: -30%;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease-in-out;
+}
+
+header .user_block_mobile {
+    position: relative;
+    box-shadow: none;
+    top: -20px;
+    right: 0;
+}
+
+header .arrow-account {
+    width: 100%;
+    text-align: right;
+    font-size: 1.6rem !important;
+}
+
+header .show {
+    display: block;
+}
+
+header .user_block div ul li {
+    padding: 8px 20px 8px 10px;
+    color: var(--black);
+    width: 100px;
+}
+
+header .user_block div ul li:hover a {
+    background-color: var(--white-gray);
+    font-weight: 600;
+}
+
+header .user_block div ul li a {
+    color: var(--black);
+    font-size: 1.4rem;
 }
 
 header .icon-group .icon:hover {
@@ -92,13 +159,13 @@ header .icon-group .icon:hover {
 
 header .menu {
     display: none;
+    position: relative;
 }
 
 .logo {
     font-size: 2rem;
     font-weight: bold;
 }
-
 
 .mobile-menu {
     width: 50%;
@@ -114,6 +181,10 @@ header .menu {
     transition: 0.5s ease;
 }
 
+.menu-active {
+    transform: translateX(0%);
+}
+
 .mobile-menu>div:nth-child(1) {
     justify-content: space-between;
     border-bottom: 1px solid var(--black);
@@ -122,8 +193,7 @@ header .menu {
 }
 
 .mobile-menu .back-btn {
-    font-size: 3.6rem;
-
+    font-size: 2.4rem;
 }
 
 .mobile-menu .logo {
@@ -164,7 +234,6 @@ header .menu {
 
 .mobile-menu .nav-group {
     margin-top: 12px;
-    gap: 18px;
 }
 
 .mobile-menu .nav-group .active {
@@ -175,9 +244,6 @@ header .menu {
 .mobile-menu .item .icon-image {
     width: 16px;
     height: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .mobile-menu .item .icon-image img {
@@ -191,12 +257,11 @@ header .menu {
     border-radius: 8px;
     font-size: 1.4rem;
     display: flex;
-    gap: 10px;
     align-items: center;
     justify-content: start;
     padding: 20px 10px;
+    position: relative;
 }
-
 
 .mobile-menu .item:hover {
     background-color: var(--white-gray);
@@ -205,13 +270,12 @@ header .menu {
 .mobile-menu .contact-us {
     padding: 20px 10px;
     border-top: 1px solid var(--black);
-    gap: 16px;
 }
 
 .mobile-menu .contact-us a {
     background-color: #dddddd;
     border-radius: 50%;
-    padding: 8px;
+    padding: 4px;
 }
 
 @media screen and (max-width: 768px) {
@@ -220,14 +284,8 @@ header .menu {
         justify-content: space-between;
     }
 
-    .search-group {
-        display: none;
-    }
-
-    .navlink-group {
-        display: none;
-    }
-
+    .search-group,
+    .navlink-group,
     .icon-group {
         display: none;
     }

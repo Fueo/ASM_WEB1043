@@ -181,7 +181,6 @@ b {
 }
 
 .category-title div button {
-  width: 5px;
   font-size: 2.4rem;
 }
 
@@ -300,7 +299,6 @@ b {
   transition: all 0.3s ease-in-out;
 }
 
-
 .product-tabs .product-grid .product-card .product-title {
   font-size: 1.6rem;
   line-height: 2.4rem;
@@ -332,8 +330,6 @@ b {
   background-color: #2C2C2C;
   color: var(--white);
 }
-
-
 
 .popular-card {
   width: 25%;
@@ -465,15 +461,16 @@ b {
     gap: 48px;
   }
 
+  .banner .banner-content .banner-title {
+    line-height: 8.5rem;
+  }
+
   .banner-content {
     width: 100%;
     gap: 16px;
     align-items: center;
   }
 
-
-
-  /* Category */
   .category-section {
     padding: 64px 4.2%;
   }
@@ -505,13 +502,9 @@ b {
   .product-tabs .product-grid .product-card {
     width: calc(50% - 12px);
     gap: 12px;
-    /* 2 sản phẩm 1 hàng */
   }
 
-
-  /* Popular Products */
   .popular-products {
-
     flex-direction: column;
   }
 
@@ -531,7 +524,6 @@ b {
     align-items: center;
   }
 
-  /* Banner2 */
   .banner2 {
     height: 512px;
     background-image: url(../img/banner2_mobile.png);
