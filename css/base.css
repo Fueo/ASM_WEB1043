@@ -4,7 +4,6 @@
     --black: #000000;
     --white-gray: #F5F5F5;
     --article-text: #909090;
-
 }
 
 * {
@@ -14,7 +13,6 @@
 html {
     font-family: "Inter", sans-serif;
     font-size: 10px;
-    line-height: 1.6rem;
 }
 
 button {
@@ -79,5 +77,8 @@ button {
     padding: 0 3.2rem;
 }
 
+.p-relative {
+    position: relative;
+}
 
 @media (375px <=width <=1024px) {}
