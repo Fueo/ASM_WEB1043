@@ -1,0 +1,421 @@
+.products-main {
+    display: flex;
+    gap: 32px;
+    padding: 24px 11% 32px;
+}
+
+.products-sidebar {
+    width: 280px;
+    min-width: 280px;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 24px;
+    height: fit-content;
+}
+
+.products-sidebar .filter-sections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.sidebar-section {
+    margin-bottom: 24px;
+}
+
+.sidebar-title {
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 1.6rem;
+}
+
+.filter-content .search-group {
+    background-color: var(--white-gray);
+    padding: 12px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.filter-content .search-group img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+}
+
+.filter-content .search-group input {
+    border: none;
+    background: none;
+    width: 100%;
+    font-size: 1.4rem;
+    outline: none;
+    color: #656565;
+}
+
+.filter-content .search-group input:focus {
+    outline: none;
+}
+
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 12px;
+}
+
+.sidebar-list li {
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+    color: #0f0f0f;
+}
+
+.sidebar-list li label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.sidebar-list li input[type="checkbox"] {
+    margin: 0;
+}
+
+.sidebar-list .count {
+    color: #aaa;
+    font-size: 1.2rem;
+    margin-left: 2px;
+}
+
+.count {
+    margin-left: auto;
+    color: var(--article-text);
+}
+
+.products-content {
+    flex: 1;
+    min-width: 0;
+    /* Prevents content from overflowing */
+}
+
+.breadcrumb {
+    font-size: 1.3rem;
+    margin: 32px 11% 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.breadcrumb a {
+    color: var(--article-text);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: var(--black);
+}
+
+.breadcrumb a:after {
+    content: ">";
+    margin-inline: 16px;
+    color: var(--article-text);
+}
+
+.products-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.filters-select .select-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background: var(--white);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.filters-select .select-btn img {
+    width: 16px;
+    height: 16px;
+    opacity: 0.6;
+}
+
+.sort-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.sort-select {
+    padding: 8px 32px 8px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    background: var(--white);
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.sort-group .dropdown-arrow {
+    position: absolute;
+    right: 12px;
+    font-size: 0.8rem;
+    color: #666;
+    pointer-events: none;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.product-card {
+    background: #fafafa;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px #eee;
+    padding: 24px 18px 18px 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 140px;
+}
+
+.product-card .fav-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.product-card .fav-btn img {
+    width: 22px;
+    height: 22px;
+}
+
+.product-card .image img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+.product-title {
+    font-size: 1.4rem;
+    color: #222;
+    text-align: center;
+    margin-bottom: 12px;
+    min-height: 48px;
+}
+
+.product-price {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.btn-buy {
+    width: 100%;
+    margin-top: auto;
+}
+
+.pagination {
+    gap: 8px;
+    margin: 32px 0;
+}
+
+.page-btn {
+    background: none;
+    border: none;
+    color: #222;
+    font-size: 1.5rem;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.page-btn.active,
+.page-btn:hover {
+    background: #222;
+    color: #fff;
+}
+
+.page-ellipsis {
+    padding: 0 8px;
+    color: #888;
+    font-size: 1.5rem;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+.dropdown-arrow {
+    font-size: 2.0rem;
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.sidebar-section.collapsed .dropdown-arrow {
+    transform: rotate(0deg);
+}
+
+.filter-content {
+    max-height: 300px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.sidebar-section.collapsed .filter-content {
+    max-height: 0;
+}
+
+.filter-btn {
+    padding: 16px;
+    margin: 12px;
+    outline: none;
+    border: #d4d4d4 1px solid;
+    color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 1.6rem;
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .products-main {
+        padding: 32px 4.2% 0 4.2%;
+    }
+
+    .products-sidebar .filter-sections {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .products-main {
+        flex-direction: column;
+        padding: 16px 12px;
+    }
+
+    .products-sidebar {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .filter-toggle-btn {
+        display: none;
+        /* Remove filter toggle button since filters are always visible */
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .product-card {
+        padding: 12px;
+    }
+
+    .product-card .image img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .product-title {
+        font-size: 1.2rem;
+        min-height: 36px;
+    }
+
+    .product-price {
+        font-size: 1.6rem;
+    }
+
+    .products-topbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .filter-btn {
+        display: flex;
+    }
+
+    .sort-select {
+        width: 100%;
+    }
+
+    .products-sidebar {
+        display: none;
+    }
+}
+
+.selected-count {
+    font-size: 1.5rem;
+    color: #222;
+}
+
+.sort-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.sort-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    min-width: 256px;
+    padding: 8px 32px 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    font-size: 1.6rem;
+    background: var(--white);
+    cursor: pointer;
+    color: var(--black);
+    outline: none;
+}
+
+.sort-group .dropdown-arrow {
+    position: absolute;
+    right: 12px;
+    font-size: 1.6rem;
+    color: #666;
+    pointer-events: none;
+    transform: rotate(180deg);
+}

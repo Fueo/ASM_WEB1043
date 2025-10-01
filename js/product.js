@@ -14,7 +14,7 @@ const replaceProduct = () => {
     let htmlData1 = productData.map((product, index, arr) => {
         return `                
             <div class="product-card flex-col flex-center">
-                <button class="fav-btn"><img src="img/like.png" alt="Favorite"></button>
+                <button class="fav-btn"><img src="img/cart-icon.png" alt="Favorite"></button>
                 <div class="image">
                     <img src="img/products/${product[0]}" alt="Product Image">
                 </div>
@@ -24,24 +24,10 @@ const replaceProduct = () => {
             </div>`
     }).join("");
 
-    let htmlData2 = productData.map((product, index, arr) => {
-        if (index > 3) {
-            return;
-        }
-        return `                
-            <div class="product-card flex-col flex-center">
-                <button class="fav-btn"><img src="img/like.png" alt="Favorite"></button>
-                <div class="image">
-                    <img src="img/products/${product[0]}" alt="Product Image">
-                </div>
-                <div class="product-title">${product[1]}</div>
-                <div class="product-price">$${product[2]}</div>
-                <button class="btn btn-buy btn-fill-black">Buy Now</button>
-            </div>`
-    }).join("");
 
     document.querySelector("#product-tab").innerHTML = htmlData1;
-    document.querySelector("#product-discount").innerHTML = htmlData2;
+    document.querySelector("#product-discount").innerHTML = htmlData1;
+
 }
 
 replaceProduct();

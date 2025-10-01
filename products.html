@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphones | E-Store</title>
+    <link rel="icon" href="img/logo_header.png" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="grid p-relative">
+        <header class="flex">
+            <a href="index.html" class="logo">
+                <img src="img/logo_header.png" alt="logo">
+            </a>
+            <div class="search-group flex">
+                <img src="img/search_icon.png" alt="search-icon">
+                <input type="text" placeholder="Search">
+            </div>
+            <nav class="navlink-group">
+                <ul class="gap-32">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    <li><a href="products.html" class="active nav-item header-category">Products</a></li>
+                </ul>
+
+            </nav>
+            <div class="icon-group gap-24 flex">
+                <a href="cart.html" class="icon flex flex-center">
+                    <img src="img/cart-icon.png" />
+                    <div class="badge">1</div>
+                </a>
+                <div href="#" class="icon flex flex-center" onclick="toggleUserBlock()">
+                    <img src="img/user-icon.png" />
+                    <div class="user_block">
+                        <div class="not_logged_in">
+                            <ul>
+                                <li><a href="#" class="">Log in</a></li>
+                                <li><a href="#" class="">Sign up</a></li>
+                            </ul>
+                        </div>
+                        <div class="logged_in">
+                            <ul>
+                                <li><a href="#" class="">Profile</a></li>
+                                <li><a href="#" class="">Log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <img src="img/menu-bar.png" alt="menu-icon" onclick="toggleMenu()">
+                <div class="badge">1</div>
+                <div class="mobile-menu flex-col">
+                    <div class="flex">
+                        <a href="#" class="logo">
+                            <img src="img/logo_header.png" alt="logo">
+                        </a>
+                        <div class="back-btn" onclick="toggleMenu()">&#60;</div>
+                    </div>
+
+                    <div class="search">
+                        <img src="img/search_icon.png" alt="search-icon">
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <ul class="nav-group gap-16 flex-col">
+                        <li>
+                            <a href="index.html" class="item gap-16 active">
+                                <div class="icon-image flex flex-center"><img src="img/home.png"></div>Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html" class="item gap-16">
+                                <div class="icon-image flex flex-center"><img src="img/product.png"></div>Products
+                            </a>
+                        </li>
+                        <li><a href="cart.html" class="item gap-16">
+                                <div class="icon-image flex flex-center"><img src="img/cart-icon.png"></div>Cart
+                                <div class="badge badge-mobile">1</div>
+                            </a></li>
+                        <li>
+                            <div href="#" class="item gap-16 account_mobile" onclick="toggleUserBlock()">
+                                <div class="icon-image flex flex-center"><img src="img/user-icon.png"></div>User
+                                <div class="arrow-account">&#129170;</div>
+                            </div>
+                        </li>
+                        <div class="user_block user_block_mobile">
+                            <div class="not_logged_in">
+                                <ul>
+                                    <li><a href="#" class="">Log in</a></li>
+                                    <li><a href="#" class="">Sign up</a></li>
+                                </ul>
+                            </div>
+                            <div class="logged_in">
+                                <ul>
+                                    <li><a href="#" class="">Profile</a></li>
+                                    <li><a href="#" class="">Log out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ul>
+
+                    <div class="contact-us gap-16 flex flex-center">
+                        <a href="#"><img src="img/Twitter-menu.png" alt="Twitter"></a>
+                        <a href="#"><img src="img/facebook-menu.png" alt="Facebook"></a>
+                        <a href="#"><img src="img/Tiktok-menu.png" alt="Tiktok"></a>
+                        <a href="#"><img src="img/Instagram-menu.png" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Add breadcrumb here, before main content -->
+        <nav class="breadcrumb">
+            <a href="index.html">Home</a>
+            <a href="#">Catalog</a>
+            <span>Smartphones</span>
+        </nav>
+
+        <main class="products-main flex">
+            <!-- Sidebar Filter -->
+            <button class="filter-btn">Filter <img src="img/Filters.png"></button>
+            <aside class="products-sidebar">
+                <div class="sidebar-section">
+                    <div class="sidebar-header" onclick="toggleFilter(this)">
+                        <div class="sidebar-title">Brand</div>
+                        <span class="dropdown-arrow">^</span>
+                    </div>
+                    <div class="filter-content">
+                        <ul class="sidebar-list">
+                            <li><label><input type="checkbox" checked> Apple <span class="count">(13)</span></label>
+                            </li>
+                            <li><label><input type="checkbox"> Samsung <span class="count">(15)</span></label></li>
+                            <li><label><input type="checkbox"> Xiaomi <span class="count">(4)</span></label></li>
+                            <li><label><input type="checkbox"> Poco <span class="count">(3)</span></label></li>
+                            <li><label><input type="checkbox"> OPPO <span class="count">(3)</span></label></li>
+                            <li><label><input type="checkbox"> Honor <span class="count">(3)</span></label></li>
+                            <li><label><input type="checkbox"> Motorola <span class="count">(2)</span></label></li>
+                            <li><label><input type="checkbox"> Nokia <span class="count">(2)</span></label></li>
+                            <li><label><input type="checkbox"> Realme <span class="count">(2)</span></label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sidebar-section">
+                    <div class="sidebar-header" onclick="toggleFilter(this)">
+                        <div class="sidebar-title">Battery capacity</div>
+                        <span class="dropdown-arrow">^</span>
+                    </div>
+                    <div class="filter-content">
+                        <ul class="sidebar-list">
+                            <li><label><input type="checkbox"> 3000-4000 mAh <span class="count">(24)</span></label>
+                            </li>
+                            <li><label><input type="checkbox"> 4000-5000 mAh <span class="count">(35)</span></label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sidebar-section">
+                    <div class="sidebar-header" onclick="toggleFilter(this)">
+                        <div class="sidebar-title">Screen type</div>
+                        <span class="dropdown-arrow">^</span>
+                    </div>
+                    <div class="filter-content">
+                        <ul class="sidebar-list">
+                            <li><label><input type="checkbox"> LCD <span class="count">(10)</span></label></li>
+                            <li><label><input type="checkbox"> OLED <span class="count">(20)</span></label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sidebar-section">
+                    <div class="sidebar-header" onclick="toggleFilter(this)">
+                        <div class="sidebar-title">Screen diagonal</div>
+                        <span class="dropdown-arrow">^</span>
+                    </div>
+                    <div class="filter-content">
+                        <ul class="sidebar-list">
+                            <li><label><input type="checkbox"> Up to 5.5" <span class="count">(15)</span></label></li>
+                            <li><label><input type="checkbox"> 5.5" - 6.0" <span class="count">(25)</span></label></li>
+                            <li><label><input type="checkbox"> 6.0" - 6.5" <span class="count">(30)</span></label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sidebar-section">
+                    <div class="sidebar-header" onclick="toggleFilter(this)">
+                        <div class="sidebar-title">Protection class</div>
+                        <span class="dropdown-arrow">^</span>
+                    </div>
+                    <div class="filter-content">
+                        <ul class="sidebar-list">
+                            <li><label><input type="checkbox"> IP67 <span class="count">(10)</span></label></li>
+                            <li><label><input type="checkbox"> IP68 <span class="count">(20)</span></label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sidebar-section">
+                    <div class="sidebar-header" onclick="toggleFilter(this)">
+                        <div class="sidebar-title">Built-in memory</div>
+                        <span class="dropdown-arrow">^</span>
+                    </div>
+                    <div class="filter-content">
+                        <ul class="sidebar-list">
+                            <li><label><input type="checkbox"> 64GB <span class="count">(10)</span></label></li>
+                            <li><label><input type="checkbox"> 128GB <span class="count">(20)</span></label></li>
+                            <li><label><input type="checkbox"> 256GB <span class="count">(15)</span></label></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Products Content -->
+            <section class="products-content">
+                <!-- Top Bar -->
+                <div class="products-topbar flex items-center">
+                    <span class="selected-count">Selected Products: <b>85</b></span>
+                    <div class="sort-group">
+                        <select class="sort-select">
+                            <option selected>By rating</option>
+                            <option>By price</option>
+                            <option>By name</option>
+                        </select>
+                        <span class="dropdown-arrow">^</span>
+
+                    </div>
+                </div>
+                <!-- Product Grid -->
+                <div class="products-grid">
+                    <!-- Products will be inserted here -->
+                </div>
+                <div class="pagination flex flex-center">
+                    <!-- Pagination will be inserted here -->
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-content flex">
+                <div class="footer-col flex-col">
+                    <div class="footer-title">
+                        <img src="img/logo.png" alt="logo">
+                    </div>
+                    <p>We are a residential interior design firm located in Portland. Our boutique-studio offers more
+                        than
+                    </p>
+                </div>
+                <div class="footer-col flex-col">
+                    <div class="footer-title">Services</div>
+                    <ul>
+                        <li>Bonus program</li>
+                        <li>Gift cards</li>
+                        <li>Credit and payment</li>
+                        <li>Service contracts</li>
+                        <li>Non-cash account</li>
+                        <li>Payment</li>
+                    </ul>
+                </div>
+                <div class="footer-col flex-col">
+                    <div class="footer-title">Assistance to the buyer</div>
+                    <ul>
+                        <li>Find an order</li>
+                        <li>Terms of delivery</li>
+                        <li>Exchange and return of goods</li>
+                        <li>Guarantee</li>
+                        <li>Frequently asked questions</li>
+                        <li>Terms of use of the site</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/Tiktok.png" alt="Tiktok"></a>
+                <a href="#"><img src="img/Instagram.png" alt="Instagram"></a>
+
+            </div>
+        </footer>
+    </div>
+    <script src="js/filters.js"></script>
+    <script src="js/products-data.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/header_account.js"></script>
+    <script src="js/header_cart.js"></script>
+</body>
+
+</html>

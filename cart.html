@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | E-Store</title>
+    <link rel="icon" href="img/logo_header.png" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="grid p-relative">
+        <!-- Header -->
+        <header class="flex">
+            <a href="#" class="logo">
+                <img src="img/logo_header.png" alt="logo">
+            </a>
+            <div class="search-group flex">
+                <img src="img/search_icon.png" alt="search-icon">
+                <input type="text" placeholder="Search">
+            </div>
+            <nav class="navlink-group">
+                <ul class="gap-32">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    <li><a href="products.html" class="nav-item">Products</a></li>
+                </ul>
+            </nav>
+            <div class="icon-group gap-24 flex">
+                <a href="#" class="icon flex flex-center">
+                    <img src="img/cart-icon.png" />
+                    <div class="badge">1</div>
+                </a>
+                <div href="#" class="icon flex flex-center" onclick="toggleUserBlock()">
+                    <img src="img/user-icon.png" />
+                    <div class="user_block">
+                        <div class="not_logged_in">
+                            <ul>
+                                <li><a href="#" class="">Log in</a></li>
+                                <li><a href="#" class="">Sign up</a></li>
+                            </ul>
+                        </div>
+                        <div class="logged_in">
+                            <ul>
+                                <li><a href="#" class="">Profile</a></li>
+                                <li><a href="#" class="">Log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <img src="img/menu-bar.png" alt="menu-icon" onclick="toggleMenu()">
+                <div class="badge">1</div>
+                <div class="mobile-menu flex-col">
+                    <div class="flex">
+                        <a href="#" class="logo">
+                            <img src="img/logo_header.png" alt="logo">
+                        </a>
+                        <div class="back-btn" onclick="toggleMenu()">&#60;</div>
+                    </div>
+
+                    <div class="search">
+                        <img src="img/search_icon.png" alt="search-icon">
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <ul class="nav-group gap-16 flex-col">
+                        <li>
+                            <a href="#" class="item gap-16">
+                                <div class="icon-image flex flex-center"><img src="img/home.png"></div>Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html" class="item gap-16">
+                                <div class="icon-image flex flex-center"><img src="img/product.png"></div>Products
+                            </a>
+                        </li>
+                        <li><a href="#" class="item gap-16 active">
+                                <div class="icon-image flex flex-center"><img src="img/cart-icon.png"></div>Cart
+                                <div class="badge badge-mobile">1</div>
+                            </a></li>
+                        <li>
+                            <div href="#" class="item gap-16 account_mobile" onclick="toggleUserBlock()">
+                                <div class="icon-image flex flex-center"><img src="img/user-icon.png"></div>User
+                                <div class="arrow-account">&#129170;</div>
+                            </div>
+                        </li>
+                        <div class="user_block user_block_mobile">
+                            <div class="not_logged_in">
+                                <ul>
+                                    <li><a href="#" class="">Log in</a></li>
+                                    <li><a href="#" class="">Sign up</a></li>
+                                </ul>
+                            </div>
+                            <div class="logged_in">
+                                <ul>
+                                    <li><a href="#" class="">Profile</a></li>
+                                    <li><a href="#" class="">Log out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ul>
+
+                    <div class="contact-us gap-16 flex flex-center">
+                        <a href="#"><img src="img/Twitter-menu.png" alt="Twitter"></a>
+                        <a href="#"><img src="img/facebook-menu.png" alt="Facebook"></a>
+                        <a href="#"><img src="img/Tiktok-menu.png" alt="Tiktok"></a>
+                        <a href="#"><img src="img/Instagram-menu.png" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Your existing cart content here -->
+        <main class="cart-main">
+            <div class="cart-content">
+                <h1>Shopping Cart</h1>
+                <div class="cart-layout">
+                    <!-- Cart Items -->
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <img src="img/products/iphone.png" alt="iPhone 14 Pro Max" class="item-image">
+                            <div class="item-detail flex">
+                                <div class="item-info">
+                                    <div class="item-title">Apple iPhone 14 Pro Max 128GB Deep Purple</div>
+                                    <div class="item-id">#25139526913984</div>
+                                </div>
+                                <div class="item-controls">
+                                    <button class="qty-btn">-</button>
+                                    <input type="number" value="1" min="1">
+                                    <button class="qty-btn">+</button>
+                                    <div class="item-price">$1399</div>
+                                    <button class="remove-btn">×</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <img src="img/products/iphone.png" alt="iPhone 14 Pro Max" class="item-image">
+                            <div class="item-detail flex">
+                                <div class="item-info">
+                                    <div class="item-title">Apple iPhone 14 Pro Max 128GB Deep Purple</div>
+                                    <div class="item-id">#25139526913984</div>
+                                </div>
+                                <div class="item-controls">
+                                    <button class="qty-btn">-</button>
+                                    <input type="number" value="1" min="1">
+                                    <button class="qty-btn">+</button>
+                                    <div class="item-price">$1399</div>
+                                    <button class="remove-btn">×</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <img src="img/products/iphone.png" alt="iPhone 14 Pro Max" class="item-image">
+                            <div class="item-detail flex">
+                                <div class="item-info">
+                                    <div class="item-title">Apple iPhone 14 Pro Max 128GB Deep Purple</div>
+                                    <div class="item-id">#25139526913984</div>
+                                </div>
+                                <div class="item-controls">
+                                    <button class="qty-btn">-</button>
+                                    <input type="number" value="1" min="1">
+                                    <button class="qty-btn">+</button>
+                                    <div class="item-price">$1399</div>
+                                    <button class="remove-btn">×</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Order Summary -->
+                    <div class="order-summary">
+                        <h2>Order Summary</h2>
+                        <div class="promo-code">
+                            <label>Discount code / Promo code</label>
+                            <div class="select-group">
+                                <select class="promo-select">
+                                    <option value="" selected disabled>Select promo code</option>
+                                    <option value="NEW10">NEW10 - 10% off for new customers</option>
+                                    <option value="HOLIDAY20">HOLIDAY20 - 20% off holiday sale</option>
+                                    <option value="APPLE15">APPLE15 - 15% off Apple products</option>
+                                </select>
+                                <span class="dropdown-arrow">▼</span>
+                            </div>
+                        </div>
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span>$2347</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Estimated Tax</span>
+                                <span>$50</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Estimated Shipping & Handling</span>
+                                <span>$29</span>
+                            </div>
+                            <div class="summary-total">
+                                <span>Total</span>
+                                <span>$2426</span>
+                            </div>
+                        </div>
+                        <button class="checkout-btn">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content flex">
+                <div class="footer-col flex-col">
+                    <div class="footer-title">
+                        <img src="img/logo.png" alt="logo">
+                    </div>
+                    <p>We are a residential interior design firm located in Portland. Our boutique-studio offers more
+                        than</p>
+                </div>
+                <div class="footer-col flex-col">
+                    <div class="footer-title">Services</div>
+                    <ul>
+                        <li>Bonus program</li>
+                        <li>Gift cards</li>
+                        <li>Credit and payment</li>
+                        <li>Service contracts</li>
+                        <li>Non-cash account</li>
+                        <li>Payment</li>
+                    </ul>
+                </div>
+                <div class="footer-col flex-col">
+                    <div class="footer-title">Assistance to the buyer</div>
+                    <ul>
+                        <li>Find an order</li>
+                        <li>Terms of delivery</li>
+                        <li>Exchange and return of goods</li>
+                        <li>Guarantee</li>
+                        <li>Frequently asked questions</li>
+                        <li>Terms of use of the site</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/Tiktok.png" alt="Tiktok"></a>
+                <a href="#"><img src="img/Instagram.png" alt="Instagram"></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/header_account.js"></script>
+    <script src="js/header_cart.js"></script>
+</body>
+
+</html>
