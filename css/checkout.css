@@ -1,0 +1,382 @@
+.checkout-main {
+    min-height: 872px;
+}
+
+.checkout-content {
+    padding: 48px 160px;
+}
+
+.checkout-address {
+    width: 50%;
+    gap: 8px;
+}
+
+
+.address-title,
+.summary-title,
+.payment-method-title {
+    font-size: 2.0rem;
+    line-height: 2.0rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.address-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.address-item input[type="radio"] {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    accent-color: black;
+}
+
+.address-detail {
+    flex: 1;
+}
+
+.address-name {
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding-top: 4px;
+}
+
+.address-line,
+.address-phone {
+    font-size: 1.6rem;
+    color: #666;
+}
+
+.button-groups {
+    display: flex;
+    gap: 8px;
+}
+
+.button-groups img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.add-new-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px 16px;
+    border: 1px solid #afafaf;
+    border-radius: 6px;
+    background: var(--white);
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.address-input {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.address-input-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.address-input-header h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.close-address-input {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #777;
+}
+
+.name-phone-group {
+    display: flex;
+    gap: 16px;
+}
+
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.input-group input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    color: #444;
+    background-color: white;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #888;
+    outline: none;
+}
+
+.save-address-btn {
+    padding: 12px 24px;
+    background-color: var(--black);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.save-address-btn:hover {
+    background-color: #1b1b1b;
+}
+
+.checkout-order {
+    width: 70%;
+    border-radius: 8px;
+}
+
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.summary-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #fff;
+    justify-content: space-between;
+}
+
+.item-name {
+    flex: 1;
+    font-size: 1.4rem;
+}
+
+.item-price {
+    font-size: 1.rem;
+    font-weight: 560;
+}
+
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.summary-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #e9e9e9;
+}
+
+.item-image {
+    width: 50px;
+    height: 50px;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.item-name {
+    font-size: 1.4rem;
+}
+
+.item-price {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.item-quantity {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.summary-address,
+.summary-shipping,
+.summary-subtotal,
+.summary-tax,
+.summary-shipping-handling,
+.summary-discount,
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 2px;
+    font-size: 1.4rem;
+}
+
+.address-label,
+.shipping-label,
+.subtotal-label,
+.tax-label,
+.shipping-handling-label,
+.discount-label,
+.total-label {
+    font-weight: 500;
+}
+
+
+.not-important-price {
+    font-weight: normal;
+    font-size: 1.2rem;
+    color: #777;
+}
+
+.summary-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.back-button,
+.pay-button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.back-button {
+    width: 50%;
+    background-color: #fff;
+    color: #000000;
+    border: 1px solid #afafaf;
+}
+
+.pay-button {
+    background-color: var(--black);
+    color: #fff;
+    border: none;
+    width: 50%;
+}
+
+.back-button:hover {
+    background-color: #eee;
+}
+
+.pay-button:hover {
+    background-color: #1b1b1b;
+}
+
+.payment-method-group {
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.payment-method-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    background-color: #fff;
+    transition: border-color 0.2s;
+}
+
+.payment-method-item:hover {
+    border-color: #888;
+}
+
+.payment-method-item input[type="radio"] {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+}
+
+.payment-method-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+
+@media (max-width: 768px) {
+    .checkout-content {
+        padding: 24px;
+        flex-direction: column;
+    }
+
+    .address-name {
+        font-size: 1.4rem;
+    }
+
+    .name-phone-group {
+        flex-direction: column;
+    }
+
+    .address-line,
+    .address-phone {
+        font-size: 1.4rem;
+    }
+
+    .checkout-address,
+    .checkout-order {
+        width: 100%;
+    }
+
+    .summary-buttons {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 16px;
+        background: var(--white);
+        justify-content: center;
+    }
+}

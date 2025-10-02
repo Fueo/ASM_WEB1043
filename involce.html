@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart | E-Store</title>
+    <title>Invoice | E-Store</title>
     <link rel="icon" href="img/logo_header.png" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/button.css">
-    <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/invoice.css">
+    <!-- Add specific invoice styles here -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -119,107 +119,96 @@
             </div>
         </header>
 
-        <!-- Your existing cart content here -->
-        <main class="cart-main">
-            <div class="cart-content">
-                <h1>Shopping Cart</h1>
-                <div class="cart-layout">
-                    <!-- Cart Items -->
-                    <div class="cart-items">
-                        <div class="cart-item">
-                            <img src="img/products/iphone.png" alt="iPhone 14 Pro Max" class="item-image">
-                            <div class="item-detail flex">
-                                <div class="item-info">
-                                    <div class="item-title">Apple iPhone 14 Pro Max 128GB Deep Purple</div>
-                                    <div class="item-id">#25139526913984</div>
-                                </div>
-                                <div class="item-controls">
-                                    <button class="qty-btn">-</button>
-                                    <input type="number" value="1" min="1">
-                                    <button class="qty-btn">+</button>
-                                    <div class="item-price">$1399</div>
-                                    <button class="remove-btn">×</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cart-item">
-                            <img src="img/products/iphone.png" alt="iPhone 14 Pro Max" class="item-image">
-                            <div class="item-detail flex">
-                                <div class="item-info">
-                                    <div class="item-title">Apple iPhone 14 Pro Max 128GB Deep Purple</div>
-                                    <div class="item-id">#25139526913984</div>
-                                </div>
-                                <div class="item-controls">
-                                    <button class="qty-btn">-</button>
-                                    <input type="number" value="1" min="1">
-                                    <button class="qty-btn">+</button>
-                                    <div class="item-price">$1399</div>
-                                    <button class="remove-btn">×</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cart-item">
-                            <img src="img/products/iphone.png" alt="iPhone 14 Pro Max" class="item-image">
-                            <div class="item-detail flex">
-                                <div class="item-info">
-                                    <div class="item-title">Apple iPhone 14 Pro Max 128GB Deep Purple</div>
-                                    <div class="item-id">#25139526913984</div>
-                                </div>
-                                <div class="item-controls">
-                                    <button class="qty-btn">-</button>
-                                    <input type="number" value="1" min="1">
-                                    <button class="qty-btn">+</button>
-                                    <div class="item-price">$1399</div>
-                                    <button class="remove-btn">×</button>
-                                </div>
-                            </div>
-                        </div>
+        <!-- Invoice Content -->
+        <main class="invoice-main">
+            <div class="invoice-content">
+                <div class="invoice-header">
+                    <div class="company-logo">
+                        <img src="img/logo_header.png" alt="Company Logo" class="company-logo">
 
                     </div>
-
-                    <!-- Order Summary -->
-                    <div class="order-summary">
-                        <h2>Order Summary</h2>
-                        <div class="promo-code">
-                            <label>Discount code / Promo code</label>
-                            <div class="select-group">
-                                <select class="promo-select">
-                                    <option value="" selected disabled>Select promo code</option>
-                                    <option value="NEW10">NEW10 - 10% off for new customers</option>
-                                    <option value="HOLIDAY20">HOLIDAY20 - 20% off holiday sale</option>
-                                    <option value="APPLE15">APPLE15 - 15% off Apple products</option>
-                                </select>
-                                <span class="dropdown-arrow">▼</span>
-                            </div>
-                        </div>
-                        <div class="summary-details flex-col gap-16">
-                            <div class="summary-row">
-                                <span>Subtotal</span>
-                                <span>$2347</span>
-                            </div>
-                            <div class="summary-row">
-                                <span class="not-important-price">Estimated Tax</span>
-                                <span class="not-important-price">$50</span>
-                            </div>
-                            <div class="summary-row">
-                                <span class="not-important-price">Estimated Shipping & Handling</span>
-                                <span class="not-important-price">$29</span>
-                            </div>
-                            <div class="summary-row">
-                                <span>Discount</span>
-                                <span>-$234</span>
-                            </div>
-                            <div class="summary-total">
-                                <span>Total</span>
-                                <span>$2426</span>
-                            </div>
-                        </div>
-                        <div class="summary-buttons">
-                            <button class="back-button" onclick="window.location.href='index.html'">Back</button>
-                            <button class="pay-button" onclick="window.location.href='checkout.html'">To
-                                checkout</button>
-                        </div>
+                    <div class="company-infor">
+                        <p>Cyber Tech Store Inc.</p>
+                        <p>500 Fifth Avenue, New York, NY 10110, USA</p>
+                        <p>Email: support@cybertechstore.com | Hotline: +1 (212) 555-7890</p>
                     </div>
+                </div>
+
+                <div class="customer-order-info">
+                    <div class="customer-info">
+                        <h3>Customer Information</h3>
+                        <p>Name: Nguyen Van A</p>
+                        <p>Phone: 0123456789</p>
+                        <p>Email: nguyenvana@example.com</p>
+                        <p>Address: 123 ABC Street, Ward 1, District 1, Ho Chi Minh City</p>
+                    </div>
+                    <div class="order-info">
+                        <h3>Order Information</h3>
+                        <p>Order Date: 30/09/2025</p>
+                        <p>Payment Method: Cash on Delivery (COD)</p>
+                        <p>Status: <span class="status-confirmed">Confirmed</span></p>
+                    </div>
+                </div>
+
+                <table class="invoice-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apple iPhone 14 Pro Max 128Gb</td>
+                            <td>1</td>
+                            <td>$1399</td>
+                            <td>$1399</td>
+                        </tr>
+                        <tr>
+                            <td>AirPods Max Silver</td>
+                            <td>1</td>
+                            <td>$549</td>
+                            <td>$549</td>
+                        </tr>
+                        <tr>
+                            <td>Apple Watch Series 9 GPS 41mm</td>
+                            <td>1</td>
+                            <td>$399</td>
+                            <td>$399</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="right-align">Shipment</td>
+                            <td>$29</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="right-align">Subtotal</td>
+                            <td>$2347</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="right-align">Estimated Tax</td>
+                            <td>$50</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="right-align">Estimated Shipping & Handling</td>
+                            <td>$29</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="right-align">Discount</td>
+                            <td>-$234</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="right-align total">Total</td>
+                            <td class="total" style="font-size: 1.6rem; font-weight: 600;">$2426</td>
+                        </tr>
+                    </tbody>
+                    </tbody>
+                </table>
+
+                <div class="invoice-footer">
+                    <p>Thank you for shopping at CyberTech <span style="color: blue;">💙</span></p>
+                    <p>For any questions, please contact Hotline: 1900 1234</p>
                 </div>
             </div>
         </main>
@@ -265,7 +254,6 @@
             </div>
         </footer>
     </div>
-
     <script src="js/menu.js"></script>
     <script src="js/header_account.js"></script>
     <script src="js/header_cart.js"></script>

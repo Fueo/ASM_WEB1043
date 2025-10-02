@@ -1,0 +1,129 @@
+.invoice-main {
+    padding: 30px;
+    /* Increased padding for a cleaner look */
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #e0e0e0;
+}
+
+.invoice-content {
+    max-width: 900px;
+    /* Increased max-width for more space */
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    /* Lighter border */
+    padding: 30px;
+    /* Increased padding */
+    font-size: 1.4rem;
+    background-color: #f9f9f9;
+    /* Light background color */
+    border-radius: 8px;
+    /* Rounded corners */
+}
+
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.company-infor {
+    text-align: right;
+}
+
+.company-info img {
+    width: 150px;
+    /* Adjust logo size */
+    margin-bottom: 15px;
+}
+
+.customer-order-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.customer-info,
+.order-info {
+    width: 48%;
+    /* Adjust width */
+    padding: 20px;
+    border: 1px solid #eee;
+    /* Lighter border */
+    border-radius: 6px;
+    background-color: #fff;
+    /* White background */
+}
+
+.order-info {
+    text-align: right;
+}
+
+.customer-info h3,
+.order-info h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    border: 1px solid #eee;
+    /* Lighter border */
+    background-color: #fff;
+    /* White background */
+    border-radius: 6px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Hide overflow for rounded corners */
+}
+
+.invoice-table th,
+.invoice-table td {
+    border: 1px solid #b3b3b3;
+    /* Lighter border */
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.invoice-table th {
+    background-color: #999999;
+    font-weight: 500;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.invoice-footer {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    /* Darker color */
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    /* Lighter border */
+}
+
+.status-confirmed {
+    color: green;
+    font-weight: bold;
+}

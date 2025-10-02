@@ -127,7 +127,7 @@
 .promo-code label,
 .bonus-card label {
     display: block;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     margin-bottom: 4px;
 }
 
@@ -137,7 +137,7 @@
     padding: 8px;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
 
 .bonus-input {
@@ -147,15 +147,6 @@
 
 .bonus-input input {
     flex: 1;
-}
-
-.apply-btn {
-    padding: 0 10px;
-    background: var(--white);
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
 }
 
 .summary-details {
@@ -168,13 +159,13 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 8px;
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
 
 .summary-total {
     display: flex;
     justify-content: space-between;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 600;
     margin-top: 16px;
 }
@@ -186,7 +177,7 @@
     color: var(--white);
     border: none;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: 500;
     cursor: pointer;
 }
@@ -201,11 +192,12 @@
     padding: 8px;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 1.4rem;
     appearance: none;
     -webkit-appearance: none;
     background: var(--white);
     cursor: pointer;
+    outline: none;
 }
 
 .select-group .dropdown-arrow {
@@ -218,12 +210,55 @@
     pointer-events: none;
 }
 
+.not-important-price {
+    font-weight: normal;
+    font-size: 1.2rem;
+    color: #777;
+}
+
 .promo-select option {
     padding: 6px;
 }
 
 .promo-select option:first-child {
     color: #666;
+}
+
+.summary-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.back-button,
+.pay-button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.back-button {
+    width: 50%;
+    background-color: #fff;
+    color: #000000;
+    border: 1px solid #afafaf;
+}
+
+.pay-button {
+    background-color: var(--black);
+    color: #fff;
+    border: none;
+    width: 50%;
+}
+
+.back-button:hover {
+    background-color: #eee;
+}
+
+.pay-button:hover {
+    background-color: #1b1b1b;
 }
 
 @media (max-width: 768px) {
@@ -273,7 +308,7 @@
     }
 
     .item-id {
-        font-size: 0.8rem;
+        font-size: 1.0rem;
         margin-bottom: 8px;
     }
 
@@ -304,43 +339,54 @@
 
     .promo-code label,
     .bonus-card label {
-        font-size: 0.8rem;
+        font-size: 1.4rem;
         margin-bottom: 4px;
     }
 
     .promo-code input,
     .bonus-card input {
         padding: 6px;
-        font-size: 0.9rem;
+        font-size: 1.4rem;
     }
 
     .apply-btn {
         padding: 0 8px;
-        font-size: 0.9rem;
+        font-size: 1.4rem;
     }
 
     .summary-row {
-        font-size: 0.9rem;
+        font-size: 1.4rem;
         margin-bottom: 6px;
     }
 
     .summary-total {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         margin-top: 12px;
     }
 
     .checkout-btn {
         padding: 8px;
-        font-size: 0.9rem;
+        font-size: 1.4rem;
     }
 
     .promo-select {
         padding: 6px;
-        font-size: 0.9rem;
+        font-size: 1.4rem;
     }
 
     .select-group .dropdown-arrow {
         right: 6px;
-        font-size: 0.7rem;
+        font-size: 1.0rem;
+    }
+
+
+    .summary-buttons {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 16px;
+        background: var(--white);
+        justify-content: center;
     }
 }
