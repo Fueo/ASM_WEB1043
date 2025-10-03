@@ -21,7 +21,7 @@
     <div class="grid p-relative">
         <!-- Header -->
         <header class="flex">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <img src="img/logo_header.png" alt="logo">
             </a>
             <div class="search-group flex">
@@ -35,7 +35,7 @@
                 </ul>
             </nav>
             <div class="icon-group gap-24 flex">
-                <a href="#" class="icon flex flex-center">
+                <a href="cart.html" class="icon flex flex-center">
                     <img src="img/cart-icon.png" />
                     <div class="badge">1</div>
                 </a>
@@ -62,7 +62,7 @@
                 <div class="badge">1</div>
                 <div class="mobile-menu flex-col">
                     <div class="flex">
-                        <a href="#" class="logo">
+                        <a href="index.html" class="logo">
                             <img src="img/logo_header.png" alt="logo">
                         </a>
                         <div class="back-btn" onclick="toggleMenu()">&#60;</div>
@@ -74,7 +74,7 @@
                     </div>
                     <ul class="nav-group gap-16 flex-col">
                         <li>
-                            <a href="#" class="item gap-16">
+                            <a href="index.html" class="item gap-16">
                                 <div class="icon-image flex flex-center"><img src="img/home.png"></div>Home
                             </a>
                         </li>
@@ -83,7 +83,7 @@
                                 <div class="icon-image flex flex-center"><img src="img/product.png"></div>Products
                             </a>
                         </li>
-                        <li><a href="#" class="item gap-16 active">
+                        <li><a href="cart.html" class="item gap-16 active">
                                 <div class="icon-image flex flex-center"><img src="img/cart-icon.png"></div>Cart
                                 <div class="badge badge-mobile">1</div>
                             </a></li>
@@ -164,11 +164,11 @@
                         <div class="payment-method-title">Payment Method</div>
                         <div class="payment-options">
                             <label class="payment-method-item">
-                                <input type="radio" name="paymentMethod" value="cod">
+                                <input type="radio" name="paymentMethod" value="cod" checked>
                                 <span>Cash on Delivery</span>
                             </label>
                             <label class="payment-method-item">
-                                <input type="radio" name="paymentMethod" value="creditCard" checked>
+                                <input type="radio" name="paymentMethod" value="creditCard">
                                 <span>Credit Card</span>
                             </label>
 
@@ -183,33 +183,6 @@
                 <div class="checkout-order">
                     <div class="order-summary">
                         <div class="summary-title">Summary</div>
-
-                        <div class="summary-item">
-                            <div class="item-image">
-                                <img src="img/products/iphone.png" alt="iPhone 14 Pro Max">
-                            </div>
-                            <div class="item-name">Apple iPhone 14 Pro Max 128Gb</div>
-                            <div class="item-quantity">x1</div>
-                            <div class="item-price not-important-price">$1399</div>
-                        </div>
-
-                        <div class="summary-item">
-                            <div class="item-image">
-                                <img src="img/products/airpod.png" alt="AirPods Max">
-                            </div>
-                            <div class="item-name">AirPods Max Silver</div>
-                            <div class="item-quantity">x1</div>
-                            <div class="item-price not-important-price">$549</div>
-                        </div>
-
-                        <div class="summary-item">
-                            <div class="item-image">
-                                <img src="img/products/watch.png" alt="Apple Watch Series 9">
-                            </div>
-                            <div class="item-name">Apple Watch Series 9 GPS 41mm</div>
-                            <div class="item-quantity">x1</div>
-                            <div class="item-price not-important-price">$399</div>
-                        </div>
 
                         <div class="summary-shipping">
                             <div class="shipping-label">Shipment</div>
@@ -243,7 +216,7 @@
 
                         <div class="summary-buttons">
                             <button class="back-button" onclick="window.location.href='cart.html'">Back</button>
-                            <button class="pay-button" onclick="window.location.href='involce.html'">Checkout</button>
+                            <button class="pay-button" onclick="handleCheckOut()">Checkout</button>
                         </div>
                     </div>
                 </div>
@@ -295,6 +268,8 @@
     <script src="js/menu.js"></script>
     <script src="js/header_account.js"></script>
     <script src="js/header_cart.js"></script>
+    <script src="js/address.js"></script>
+
     <script src="js/checkout.js"></script>
 </body>
 

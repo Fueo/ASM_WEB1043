@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphones | E-Store</title>
+    <link rel="icon" href="img/logo_header.png" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="grid p-relative">
+        <header class="flex">
+            <a href="index.html" class="logo">
+                <img src="img/logo_header.png" alt="logo">
+            </a>
+            <div class="search-group flex">
+                <img src="img/search_icon.png" alt="search-icon">
+                <input type="text" placeholder="Search">
+            </div>
+            <nav class="navlink-group">
+                <ul class="gap-32">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    <li><a href="products.html" class="nav-item active">Products</a></li>
+                </ul>
+            </nav>
+            <div class="icon-group gap-24 flex">
+                <a href="cart.html" class="icon flex flex-center">
+                    <img src="img/cart-icon.png" />
+                    <div class="badge">1</div>
+                </a>
+                <div href="#" class="icon flex flex-center" onclick="toggleUserBlock()">
+                    <img src="img/user-icon.png" />
+                    <div class="user_block">
+                        <div class="not_logged_in">
+                            <ul>
+                                <li><a href="#" class="">Log in</a></li>
+                                <li><a href="#" class="">Sign up</a></li>
+                            </ul>
+                        </div>
+                        <div class="logged_in">
+                            <ul>
+                                <li><a href="#" class="">Profile</a></li>
+                                <li><a href="#" class="">Log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <img src="img/menu-bar.png" alt="menu-icon" onclick="toggleMenu()">
+                <div class="badge">1</div>
+                <div class="mobile-menu flex-col">
+                    <div class="flex">
+                        <a href="index.html" class="logo">
+                            <img src="img/logo_header.png" alt="logo">
+                        </a>
+                        <div class="back-btn" onclick="toggleMenu()">&#60;</div>
+                    </div>
+
+                    <div class="search">
+                        <img src="img/search_icon.png" alt="search-icon">
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <ul class="nav-group gap-16 flex-col">
+                        <li>
+                            <a href="index.html" class="item gap-16">
+                                <div class="icon-image flex flex-center"><img src="img/home.png"></div>Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html" class="item gap-16 active">
+                                <div class="icon-image flex flex-center"><img src="img/product.png"></div>Products
+                            </a>
+                        </li>
+                        <li><a href="cart.html" class="item gap-16 ">
+                                <div class="icon-image flex flex-center"><img src="img/cart-icon.png"></div>Cart
+                                <div class="badge badge-mobile">1</div>
+                            </a></li>
+                        <li>
+                            <div href="#" class="item gap-16 account_mobile" onclick="toggleUserBlock()">
+                                <div class="icon-image flex flex-center"><img src="img/user-icon.png"></div>User
+                                <div class="arrow-account">&#129170;</div>
+                            </div>
+                        </li>
+                        <div class="user_block user_block_mobile">
+                            <div class="not_logged_in">
+                                <ul>
+                                    <li><a href="#" class="">Log in</a></li>
+                                    <li><a href="#" class="">Sign up</a></li>
+                                </ul>
+                            </div>
+                            <div class="logged_in">
+                                <ul>
+                                    <li><a href="#" class="">Profile</a></li>
+                                    <li><a href="#" class="">Log out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ul>
+
+                    <div class="contact-us gap-16 flex flex-center">
+                        <a href="#"><img src="img/Twitter-menu.png" alt="Twitter"></a>
+                        <a href="#"><img src="img/facebook-menu.png" alt="Facebook"></a>
+                        <a href="#"><img src="img/Tiktok-menu.png" alt="Tiktok"></a>
+                        <a href="#"><img src="img/Instagram-menu.png" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Add breadcrumb here, before main content -->
+        <nav class="breadcrumb">
+            <a href="index.html">Home</a>
+            <a href="#">Catalog</a>
+            <a href="#">Smartphones</a>
+            <a href="#">Apple</a>
+            <span>IPhone 14 Pro Max</span>
+        </nav>
+        <main class="detail-main">
+
+            <div class="detail-summary flex">
+                <aside class="detail-imgs flex">
+                    <div class="thumbnail-images flex-col">
+                        <img src="img/products/detail1.png" alt="Iphone 14 Pro Max" class="thumbnail active">
+                        <img src="img/products/detail2.png" alt="Iphone 14 Pro Max" class="thumbnail">
+                        <img src="img/products/detail3.png" alt="Iphone 14 Pro Max" class="thumbnail">
+                        <img src="img/products/detail4.png" alt="Iphone 14 Pro Max" class="thumbnail">
+                    </div>
+                    <img src="img/products/detail-show.png" alt="iPhone 14 Pro Max" class="main-image">
+
+                </aside>
+
+                <section class="detail-content">
+                    <h1>Apple iPhone 14 Pro Max</h1>
+                    <div class="price">
+                        <span class="current-price">$1399</span>
+                        <span class="original-price">$1499</span>
+                    </div>
+
+                    <div class="color-options flex">
+                        <p>Select color:</p>
+                        <div class="colors">
+                            <span class="color black active"></span>
+                            <span class="color purple"></span>
+                            <span class="color red"></span>
+                            <span class="color gold"></span>
+                            <span class="color silver"></span>
+                        </div>
+                    </div>
+
+                    <div class="storage-options">
+                        <button class="storage-button active">128GB</button>
+                        <button class="storage-button">256GB</button>
+                        <button class="storage-button">512GB</button>
+                        <button class="storage-button">1TB</button>
+                    </div>
+
+                    <div class="specs">
+                        <div class="spec">
+                            <img src="img/detail-icon1.png" alt="Screen Size">
+                            <div class="spec_info flex-col">
+                                <span>Screen size</span>
+                                <span>6.7"</span>
+                            </div>
+                        </div>
+                        <div class="spec">
+                            <img src="img/detail-icon2.png" alt="CPU">
+                            <div class="spec_info flex-col">
+                                <span>CPU</span>
+                                <span>Apple A16 Bionic</span>
+                            </div>
+                        </div>
+                        <div class="spec">
+                            <img src="img/detail-icon3.png" alt="Number of Cores">
+                            <div class="spec_info flex-col">
+                                <span>Number of Cores</span>
+                                <span>6</span>
+                            </div>
+                        </div>
+                        <div class="spec">
+                            <img src="img/detail-icon4.png" alt="Main Camera">
+                            <div class="spec_info flex-col">
+                                <span>Main camera</span>
+                                <span>48-12-12 MP</span>
+                            </div>
+                        </div>
+                        <div class="spec">
+                            <img src="img/detail-icon5.png" alt="Front Camera">
+                            <div class="spec_info flex-col">
+                                <span>Front-camera</span>
+                                <span>12 MP</span>
+                            </div>
+                        </div>
+                        <div class="spec">
+                            <img src="img/detail-icon6.png" alt="Battery Capacity">
+                            <div class="spec_info flex-col">
+                                <span>Battery capacity</span>
+                                <span>4323 mAh</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="description">Enhanced capabilities thanks toan enlarged display of 6.7 inchesand work
+                        without
+                        rechargingthroughout the day. Incredible photosas in weak, yesand in bright lightusing the
+                        new
+                        systemwith
+                        two cameras <a href="#">more...</a></p>
+
+                    <div class="actions flex">
+                        <button class="btn-add">Add to Card</button>
+                        <button class="btn-buynow">Buy now</button>
+                    </div>
+
+                    <div class="details">
+                        <div class="detail flex">
+                            <img src="img/delivery.png" alt="Number of Cores">
+                            <div class="spec_info flex-col">
+                                <span>Free Delivery</span>
+                                <span>1-2 day</span>
+                            </div>
+                        </div>
+                        <div class="detail flex">
+                            <img src="img/instock.png" alt="Number of Cores">
+                            <div class="spec_info flex-col">
+                                <span>In Stock</span>
+                                <span>Today</span>
+                            </div>
+                        </div>
+                        <div class="detail flex">
+                            <img src="img/guarantee.png" alt="Number of Cores">
+                            <div class="spec_info flex-col">
+                                <span>Guaranteed</span>
+                                <span>1 year</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <section class="detail-information">
+                <div class="detail-information-content flex-col">
+                    <h2>Details</h2>
+                    <p>Just as a book is judged by its cover, the first thing you notice when you pick up a modern
+                        smartphone is the display. Nothing surprising, because advanced technologies allow you to
+                        practically level the display frames and cutouts for the front camera and speaker, leaving no
+                        room for bold design solutions. And how good that in such realities Apple everything is fine
+                        with displays. Both critics and mass consumers always already the quality of the picture
+                        provided by the products of the Californian brand. And last year's 6.7-inch Retina panels, which
+                        had ProMotion, caused real admiration for many.</p>
+                    <h3>Screen</h3>
+                    <div class="detail-infoflex-col">
+                        <div class="detail-info-row">
+                            <div class="detail-info-label">Screen diagonal</div>
+                            <div class="detail-info-value">6.7"</div>
+                        </div>
+                        <div class="detail-info-row">
+                            <div class="detail-info-label">The screen resolution</div>
+                            <div class="detail-info-value">2796x1290</div>
+                        </div>
+                        <div class="detail-info-row">
+                            <div class="detail-info-label">The screen refresh rate</div>
+                            <div class="detail-info-value">120 Hz</div>
+                        </div>
+                        <div class="detail-info-row">
+                            <div class="detail-info-label">The pixel density</div>
+                            <div class="detail-info-value">460 ppi</div>
+                        </div>
+                        <div class="detail-info-row">
+                            <div class="detail-info-label">Screen type</div>
+                            <div class="detail-info-value">OLED</div>
+                        </div>
+                        <div class="detail-info-row">
+                            <div class="detail-info-label">Additionally</div>
+                            <div class="detail-info-value">
+                                <div>Dynamic Island</div>
+                                <div>Always-On display</div>
+                                <div>HDR display</div>
+                                <div>True Tone</div>
+                                <div>Wide color (P3)</div>
+                            </div>
+                        </div>
+                        <h3>CPU</h3>
+                        <div class="detail-info-row">
+                            <div class="detail-info-label">CPU</div>
+                            <div class="detail-info-value">A16 Bionic</div>
+                        </div>
+                        <div class="detail-info-row">
+                            <div class="detail-info-label">Number of cores</div>
+                            <div class="detail-info-value">6</div>
+                        </div>
+                    </div>
+
+                    <button class="view-more-button">View More
+                    </button>
+                </div>
+            </section>
+
+            <section class="product-tabs">
+                <div class="tabs">
+                    <button class="tab-item active">Related Products</button>
+                </div>
+                <div class="product-grid flex" id="product-related">
+
+                </div>
+            </section>
+        </main>
+
+
+        <footer>
+            <div class="footer-content flex">
+                <div class="footer-col flex-col">
+                    <div class="footer-title">
+                        <img src="img/logo.png" alt="logo">
+                    </div>
+                    <p>We are a residential interior design firm located in Portland. Our boutique-studio offers more
+                        than
+                    </p>
+                </div>
+                <div class="footer-col flex-col">
+                    <div class="footer-title">Services</div>
+                    <ul>
+                        <li>Bonus program</li>
+                        <li>Gift cards</li>
+                        <li>Credit and payment</li>
+                        <li>Service contracts</li>
+                        <li>Non-cash account</li>
+                        <li>Payment</li>
+                    </ul>
+                </div>
+                <div class="footer-col flex-col">
+                    <div class="footer-title">Assistance to the buyer</div>
+                    <ul>
+                        <li>Find an order</li>
+                        <li>Terms of delivery</li>
+                        <li>Exchange and return of goods</li>
+                        <li>Guarantee</li>
+                        <li>Frequently asked questions</li>
+                        <li>Terms of use of the site</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/Tiktok.png" alt="Tiktok"></a>
+                <a href="#"><img src="img/Instagram.png" alt="Instagram"></a>
+
+            </div>
+        </footer>
+    </div>
+    <script src="js/products-data.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/detail.js"></script>
+    <script src="js/header_account.js"></script>
+    <script src="js/header_cart.js"></script>
+</body>
+
+</html>

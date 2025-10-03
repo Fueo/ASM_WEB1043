@@ -3,22 +3,53 @@
     /* Increased padding for a cleaner look */
 }
 
-.back-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #f0f0f0;
-    color: #333;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.4rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
+.invoice-success {
+    text-align: center;
+    padding: 40px;
+    border: 1px solid #d4edda;
+    background-color: #f0fdf4;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-.back-button:hover {
-    background-color: #e0e0e0;
+.success-icon img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.invoice-success h2 {
+    font-size: 2.4rem;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.invoice-success p {
+    font-size: 1.6rem;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.back-to-home-button,
+.view-button {
+    padding: 12px 24px;
+    background-color: var(--white);
+    color: #000000;
+    border: 1px solid #afafaf;
+    border-radius: 6px;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.view-button {
+    background-color: var(--black);
+    color: var(--white);
+    margin-left: 15px;
+
+}
+
+.back-to-home-button:hover {
+    background-color: #eee;
 }
 
 .invoice-content {
@@ -33,6 +64,7 @@
     background-color: #f9f9f9;
     /* Light background color */
     border-radius: 8px;
+    display: none;
     /* Rounded corners */
 }
 
@@ -126,4 +158,50 @@
 .status-confirmed {
     color: green;
     font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .invoice-success {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .invoice-success button {
+        width: 100%;
+        margin: 0;
+    }
+
+    .invoice-header,
+    .customer-order-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .company-infor {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .customer-info,
+    .order-info {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .order-info {
+        text-align: left;
+    }
+
+    .invoice-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .invoice-table th,
+    .invoice-table td {
+        white-space: nowrap;
+    }
 }

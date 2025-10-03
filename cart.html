@@ -21,7 +21,7 @@
     <div class="grid p-relative">
         <!-- Header -->
         <header class="flex">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <img src="img/logo_header.png" alt="logo">
             </a>
             <div class="search-group flex">
@@ -35,7 +35,7 @@
                 </ul>
             </nav>
             <div class="icon-group gap-24 flex">
-                <a href="#" class="icon flex flex-center">
+                <a href="cart.html" class="icon flex flex-center">
                     <img src="img/cart-icon.png" />
                     <div class="badge">1</div>
                 </a>
@@ -62,7 +62,7 @@
                 <div class="badge">1</div>
                 <div class="mobile-menu flex-col">
                     <div class="flex">
-                        <a href="#" class="logo">
+                        <a href="index.html" class="logo">
                             <img src="img/logo_header.png" alt="logo">
                         </a>
                         <div class="back-btn" onclick="toggleMenu()">&#60;</div>
@@ -74,7 +74,7 @@
                     </div>
                     <ul class="nav-group gap-16 flex-col">
                         <li>
-                            <a href="#" class="item gap-16">
+                            <a href="index.html" class="item gap-16">
                                 <div class="icon-image flex flex-center"><img src="img/home.png"></div>Home
                             </a>
                         </li>
@@ -83,7 +83,7 @@
                                 <div class="icon-image flex flex-center"><img src="img/product.png"></div>Products
                             </a>
                         </li>
-                        <li><a href="#" class="item gap-16 active">
+                        <li><a href="cart.html" class="item gap-16 active">
                                 <div class="icon-image flex flex-center"><img src="img/cart-icon.png"></div>Cart
                                 <div class="badge badge-mobile">1</div>
                             </a></li>
@@ -142,39 +142,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cart-item">
-                            <img src="img/products/iphone.png" alt="iPhone 14 Pro Max" class="item-image">
-                            <div class="item-detail flex">
-                                <div class="item-info">
-                                    <div class="item-title">Apple iPhone 14 Pro Max 128GB Deep Purple</div>
-                                    <div class="item-id">#25139526913984</div>
-                                </div>
-                                <div class="item-controls">
-                                    <button class="qty-btn">-</button>
-                                    <input type="number" value="1" min="1">
-                                    <button class="qty-btn">+</button>
-                                    <div class="item-price">$1399</div>
-                                    <button class="remove-btn">×</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cart-item">
-                            <img src="img/products/iphone.png" alt="iPhone 14 Pro Max" class="item-image">
-                            <div class="item-detail flex">
-                                <div class="item-info">
-                                    <div class="item-title">Apple iPhone 14 Pro Max 128GB Deep Purple</div>
-                                    <div class="item-id">#25139526913984</div>
-                                </div>
-                                <div class="item-controls">
-                                    <button class="qty-btn">-</button>
-                                    <input type="number" value="1" min="1">
-                                    <button class="qty-btn">+</button>
-                                    <div class="item-price">$1399</div>
-                                    <button class="remove-btn">×</button>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
 
                     <!-- Order Summary -->
@@ -185,9 +152,6 @@
                             <div class="select-group">
                                 <select class="promo-select">
                                     <option value="" selected disabled>Select promo code</option>
-                                    <option value="NEW10">NEW10 - 10% off for new customers</option>
-                                    <option value="HOLIDAY20">HOLIDAY20 - 20% off holiday sale</option>
-                                    <option value="APPLE15">APPLE15 - 15% off Apple products</option>
                                 </select>
                                 <span class="dropdown-arrow">▼</span>
                             </div>
@@ -265,10 +229,11 @@
             </div>
         </footer>
     </div>
-
+    <script src="js/voucher.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/header_account.js"></script>
     <script src="js/header_cart.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 
 </html>

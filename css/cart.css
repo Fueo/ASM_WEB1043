@@ -1,5 +1,21 @@
 .cart-main {
     padding: 20px 11%;
+    min-height: 100vh;
+}
+
+.empty-section {
+    width: 100%;
+    height: 60vh;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.9rem;
+    line-height: 4.0rem;
+    font-weight: 500;
+}
+
+.empty-section button {
+    width: fit-content;
 }
 
 .cart-main h1 {

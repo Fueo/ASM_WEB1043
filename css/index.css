@@ -242,7 +242,8 @@ b {
   overflow: hidden;
 }
 
-.product-tabs .tabs .tab-item {
+.product-tabs .tabs .tab-item,
+.discount-tabs .tab {
   background: none;
   border: none;
   font-size: 1.6rem;
@@ -253,6 +254,12 @@ b {
   padding: 0;
   padding-bottom: 5px;
   display: inline-block;
+}
+
+.discount-tabs .tab {
+  font-size: 1.6rem;
+  font-weight: 600;
+  opacity: 100%;
 }
 
 .product-tabs .tabs .active {
@@ -311,6 +318,25 @@ b {
   line-height: 2.4rem;
   font-weight: 600;
   text-align: center;
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-price .old-price {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  text-decoration: line-through;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.product-price .new-price {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  font-weight: 600;
   color: var(--black);
 }
 

@@ -232,6 +232,24 @@
     color: #222;
     margin-bottom: 12px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-price .old-price {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+    text-decoration: line-through;
+    color: #888;
+    margin-bottom: 4px;
+}
+
+.product-price .new-price {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    font-weight: 600;
+    color: var(--black);
 }
 
 .btn-buy {

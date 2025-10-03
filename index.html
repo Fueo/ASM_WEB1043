@@ -31,10 +31,9 @@
             </div>
             <nav class="navlink-group">
                 <ul class="gap-32">
-                    <li><a href="index.html" class="active nav-item">Home</a></li>
-                    <li><a href="products.html" class="nav-item header-category">Products</a></li>
+                    <li><a href="index.html" class="nav-item active">Home</a></li>
+                    <li><a href="products.html" class="nav-item">Products</a></li>
                 </ul>
-
             </nav>
             <div class="icon-group gap-24 flex">
                 <a href="cart.html" class="icon flex flex-center">
@@ -64,7 +63,7 @@
                 <div class="badge">1</div>
                 <div class="mobile-menu flex-col">
                     <div class="flex">
-                        <a href="#" class="logo">
+                        <a href="index.html" class="logo">
                             <img src="img/logo_header.png" alt="logo">
                         </a>
                         <div class="back-btn" onclick="toggleMenu()">&#60;</div>
@@ -76,7 +75,7 @@
                     </div>
                     <ul class="nav-group gap-16 flex-col">
                         <li>
-                            <a href="#" class="item gap-16 active">
+                            <a href="index.html" class="item gap-16 active">
                                 <div class="icon-image flex flex-center"><img src="img/home.png"></div>Home
                             </a>
                         </li>
@@ -85,7 +84,7 @@
                                 <div class="icon-image flex flex-center"><img src="img/product.png"></div>Products
                             </a>
                         </li>
-                        <li><a href="#" class="item gap-16">
+                        <li><a href="cart.html" class="item gap-16">
                                 <div class="icon-image flex flex-center"><img src="img/cart-icon.png"></div>Cart
                                 <div class="badge badge-mobile">1</div>
                             </a></li>
@@ -350,11 +349,11 @@
             </div>
         </section>
 
-        <section class="product-tabs">
+        <section class="product-tabs discount-tabs">
             <div class="tabs">
-                <button class="tab-item active">Discounts up to -50%</button>
+                <button class="tab">Discounts up to -50%</button>
             </div>
-            <div class="product-grid flex" id="product-discount">
+            <div class=" product-grid flex" id="product-discount">
             </div>
         </section>
         <section class="banner2 flex-col flex-center">
@@ -406,11 +405,11 @@
     </div>
 
 </body>
-
+<script src="js/header_cart.js"></script>
 <script src="js/product.js"></script>
 <script src="js/slide.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/header_account.js"></script>
-<script src="js/header_cart.js"></script>
+
 
 </html>

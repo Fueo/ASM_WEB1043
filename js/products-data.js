@@ -1,100 +1,71 @@
-const productsData = [
-    {
-        img: "iphone1.png",
-        title: "Apple iPhone 14 Pro 512GB Gold (MQ233)",
-        price: 1437,
-    },
-    {
-        img: "iphone2.png",
-        title: "Apple iPhone 11 128GB White (MQ223)",
-        price: 510,
-    },
-    {
-        img: "iphone3.png",
-        title: "Apple iPhone 11 128GB White (MQ223)",
-        price: 550,
-    },
-    {
-        img: "airpod.png",
-        title: "AirPods Max Silver Starlight Aluminium",
-        price: 549,
-    },
-    {
-        img: "watch.png",
-        title: "Samsung Galaxy Watch6 Classic 47mm Black",
-        price: 369,
-    },
-    {
-        img: "galaxyz.png",
-        title: "Galaxy Z Fold5 Unlocked | 256GB | Phantom Black",
-        price: 1799,
-    },
-    {
-        img: "iphone5.png",
-        title: "Apple IPhone 13 Mini 128GB Blue (MLL73)",
-        price: 599,
-    },
-    {
-        img: "ipad.png",
-        title: 'Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021',
-        price: 398,
-    },
-    {
-        img: "ipad.png",
-        title: 'Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021',
-        price: 398,
-    },
-    {
-        img: "ipad.png",
-        title: 'Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021',
-        price: 398,
-    },
-    {
-        img: "ipad.png",
-        title: 'Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021',
-        price: 398,
-    },
-    {
-        img: "ipad.png",
-        title: 'Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021',
-        price: 398,
-    },
-    {
-        img: "ipad.png",
-        title: 'Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021',
-        price: 398,
-    },
-    {
-        img: "ipad.png",
-        title: 'Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021',
-        price: 398,
-    },
-    {
-        img: "ipad.png",
-        title: 'Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021',
-        price: 398,
-    },
-    {
-        img: "ipad.png",
-        title: 'Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021',
-        price: 398,
-    },
-    {
-        img: "ipad.png",
-        title: 'Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021',
-        price: 398,
-    },
-    {
-        img: "ipad.png",
-        title: 'Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021',
-        price: 398,
-    },
-    {
-        img: "ipad.png",
-        title: 'Apple iPad 9 10.2" 64GB Wi-Fi Silver (MK2L3) 2021',
-        price: 398,
-    },
-];
+const productData = {
+    "New Arrival": [
+        { img: "iphone.png", name: "iPhone 14 Pro 128GB", price: 999, id: "new-arrival-1" },
+        { img: "ipad.png", name: 'Apple iPad 9 10.2" 64GB Wi-Fi', price: 398, id: "new-arrival-2" },
+        { img: "watch.png", name: "Apple Watch Series 8 GPS 45mm", price: 399, id: "new-arrival-3" },
+        { img: "watch.png", name: "Apple Watch Series 8 GPS 45mm", price: 399, id: "new-arrival-4" },
+    ],
+
+    "Bestseller": [
+        { img: "iphone1.png", name: "iPhone 14 Pro 256GB", price: 1099, id: "bestseller-1" },
+        { img: "iphone2.png", name: "iPhone 14 Pro Max 128GB", price: 1199, id: "bestseller-2" },
+        { img: "airpod.png", name: "Apple AirPods Pro (2nd Gen)", price: 249, id: "bestseller-3" },
+        { img: "airpod.png", name: "Apple AirPods Pro (2nd Gen)", price: 249, id: "bestseller-4" },
+    ],
+
+    "Featured Products": [
+        { img: "camera.png", name: "Canon EOS R5 Mirrorless Camera", price: 3899, id: "featured-1" },
+        { img: "headphones.png", name: "Apple AirPods Max", price: 549, id: "featured-2" },
+        { img: "samsungwatch.png", name: "Samsung Galaxy Watch 5 44mm", price: 329, id: "featured-3" },
+        { img: "galaxyz.png", name: "Samsung Galaxy S22 Ultra 256GB", price: 1199, id: "featured-4" }
+    ],
+
+    "Discount": [
+        { img: "iphone3.png", name: "iPhone 14 Pro Max 256GB", price: 1299, oldPrice: 1399, id: "discount-1" },
+        { img: "iphone4.png", name: "iPhone 13 128GB", price: 749, oldPrice: 799, id: "discount-2" },
+        { img: "iphone5.png", name: "iPhone 13 Mini 128GB", price: 649, oldPrice: 699, id: "discount-3" },
+        { img: "iphone6.png", name: "iPhone 12 128GB", price: 549, oldPrice: 599, id: "discount-4" }
+    ]
+};
+
+// Function to add item to cart
+const addToCart = (productId) => {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const product = findProductById(productId);
+
+    if (product) {
+        const existingItem = cart.find(item => item.id === productId);
+
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cart.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.img,
+                quantity: 1
+            });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${product.name} added to cart!`);
+        updateCartDisplay();
+    } else {
+        alert('Product not found!');
+    }
+};
+
+// Function to find a product by its ID
+const findProductById = (productId) => {
+    for (const tab in productData) {
+        const product = productData[tab].find(p => p.id === productId);
+        if (product) {
+            return product;
+        }
+    }
+    return null;
+};
 
 // Pagination settings
 const ITEMS_PER_PAGE = 6;
@@ -127,7 +98,8 @@ const renderPagination = (totalItems) => {
 };
 
 const changePage = (page) => {
-    const totalPages = Math.ceil(productsData.length / ITEMS_PER_PAGE);
+    const allProducts = Object.values(productData).flat();
+    const totalPages = Math.ceil(allProducts.length / ITEMS_PER_PAGE);
 
     if (page === 'prev') {
         currentPage = Math.max(1, currentPage - 1);
@@ -140,37 +112,51 @@ const changePage = (page) => {
     renderProducts();
 };
 
+
+
 const renderProducts = () => {
     const productGrid = document.querySelector('.products-grid');
 
-    // Calculate pagination indices
+    // Gộp toàn bộ sản phẩm từ các tab thành 1 mảng duy nhất
+    const allProducts = Object.values(productData).flat();
+
+    // Tính toán chỉ số phân trang
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     const endIndex = startIndex + ITEMS_PER_PAGE;
-    const paginatedProducts = productsData.slice(startIndex, endIndex);
+    const paginatedProducts = allProducts.slice(startIndex, endIndex);
 
+    // Sinh HTML cho từng sản phẩm
     const productsHTML = paginatedProducts.map(product => {
+        let priceHtml = product.oldPrice
+            ? `<div class="product-price">
+                   <span class="old-price">$${product.oldPrice}</span>
+                   <span class="new-price">$${product.price}</span>
+               </div>`
+            : `<div class="product-price">$${product.price}</div>`;
+
         return `
-            <div class="product-card">
-                <button class="fav-btn">
-                    <img src="img/cart-icon.png" 
-                         alt="Cart">
+            <div class="product-card flex-col flex-center">
+                <button class="fav-btn" onclick="addToCart('${product.id}')">
+                    <img src="img/cart-icon.png" alt="Cart">
                 </button>
                 <div class="image">
-                    <img src="img/products/${product.img}" 
-                         alt="${product.title}">
+                    <img src="img/products/${product.img}" alt="${product.name}">
                 </div>
-                <div class="product-title">${product.title}</div>
-                <div class="product-price">$${product.price}</div>
+                <div class="product-title">${product.name}</div>
+                ${priceHtml}
                 <button class="btn btn-fill-black btn-buy">Buy Now</button>
             </div>
         `;
     }).join('');
 
+    // Gắn HTML vào grid
     productGrid.innerHTML = productsHTML;
-    renderPagination(productsData.length);
 
-    // Update selected products count
-    document.querySelector('.selected-count b').textContent = productsData.length;
+    // Render phân trang
+    renderPagination(allProducts.length);
+
+    // Update số lượng sản phẩm
+    document.querySelector('.selected-count b').textContent = allProducts.length;
 };
 
 // Initialize products when DOM is loaded
