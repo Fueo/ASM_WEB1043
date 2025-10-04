@@ -211,6 +211,13 @@
     height: 22px;
 }
 
+.product-card .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .product-card .image img {
     width: 120px;
     height: 120px;
@@ -219,11 +226,11 @@
 }
 
 .product-title {
-    font-size: 1.4rem;
-    color: #222;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 500;
     text-align: center;
-    margin-bottom: 12px;
-    min-height: 48px;
+    color: var(--black);
 }
 
 .product-price {
@@ -335,15 +342,6 @@
     display: none;
 }
 
-@media (max-width: 1100px) {
-    .products-main {
-        padding: 32px 4.2% 0 4.2%;
-    }
-
-    .products-sidebar .filter-sections {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
 @media (max-width: 768px) {
     .products-main {
@@ -376,7 +374,7 @@
     }
 
     .product-title {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         min-height: 36px;
     }
 
@@ -401,39 +399,44 @@
     .products-sidebar {
         display: none;
     }
-}
 
-.selected-count {
-    font-size: 1.5rem;
-    color: #222;
-}
+    .product-info {
+        cursor: pointer;
+        min-height: 50px;
+    }
 
-.sort-group {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
+    .selected-count {
+        font-size: 1.5rem;
+        color: #222;
+    }
 
-.sort-select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    min-width: 256px;
-    padding: 8px 32px 8px 12px;
-    border-radius: 6px;
-    border: 1px solid #e0e0e0;
-    font-size: 1.6rem;
-    background: var(--white);
-    cursor: pointer;
-    color: var(--black);
-    outline: none;
-}
+    .sort-group {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
 
-.sort-group .dropdown-arrow {
-    position: absolute;
-    right: 12px;
-    font-size: 1.6rem;
-    color: #666;
-    pointer-events: none;
-    transform: rotate(180deg);
+    .sort-select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        min-width: 256px;
+        padding: 8px 32px 8px 12px;
+        border-radius: 6px;
+        border: 1px solid #e0e0e0;
+        font-size: 1.6rem;
+        background: var(--white);
+        cursor: pointer;
+        color: var(--black);
+        outline: none;
+    }
+
+    .sort-group .dropdown-arrow {
+        position: absolute;
+        right: 12px;
+        font-size: 1.6rem;
+        color: #666;
+        pointer-events: none;
+        transform: rotate(180deg);
+    }
 }

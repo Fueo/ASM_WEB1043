@@ -71,6 +71,8 @@ const findProductById = (productId) => {
 const ITEMS_PER_PAGE = 6;
 let currentPage = 1;
 
+
+//Tính toán và hiển thị phân trang
 const renderPagination = (totalItems) => {
     const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
     const paginationContainer = document.querySelector('.pagination');
@@ -97,16 +99,18 @@ const renderPagination = (totalItems) => {
     paginationContainer.innerHTML = paginationHTML;
 };
 
+
+// Logic chuyển trang
 const changePage = (page) => {
     const allProducts = Object.values(productData).flat();
     const totalPages = Math.ceil(allProducts.length / ITEMS_PER_PAGE);
 
     if (page === 'prev') {
-        currentPage = Math.max(1, currentPage - 1);
+        currentPage = Math.max(1, currentPage - 1); // KT nếu trang hiện tại là 1 thì ko giảm nữa
     } else if (page === 'next') {
-        currentPage = Math.min(totalPages, currentPage + 1);
+        currentPage = Math.min(totalPages, currentPage + 1); // KT nếu trang hiện tại là trang cuối thì ko tăng nữa
     } else {
-        currentPage = page;
+        currentPage = page; // Trường hợp còn lại thì bth
     }
 
     renderProducts();
@@ -139,12 +143,14 @@ const renderProducts = () => {
                 <button class="fav-btn" onclick="addToCart('${product.id}')">
                     <img src="img/cart-icon.png" alt="Cart">
                 </button>
-                <div class="image">
-                    <img src="img/products/${product.img}" alt="${product.name}">
+                <div class="product-info" onclick="location.href='detail.html'">
+                    <div class="image">
+                        <img src="img/products/${product.img}" alt="${product.name}">
+                    </div>
+                    <div class="product-title">${product.name}</div>
                 </div>
-                <div class="product-title">${product.name}</div>
                 ${priceHtml}
-                <button class="btn btn-fill-black btn-buy">Buy Now</button>
+                <button class="btn btn-fill-black btn-buy" onclick="handleBuyNow('${product.id}')">Buy Now</button>
             </div>
         `;
     }).join('');
@@ -158,6 +164,12 @@ const renderProducts = () => {
     // Update số lượng sản phẩm
     document.querySelector('.selected-count b').textContent = allProducts.length;
 };
+
+// Xử lý nút buy now
+const handleBuyNow = (productId) => {
+    addToCart(productId);
+    window.location.href = 'cart.html';
+}
 
 // Initialize products when DOM is loaded
 document.addEventListener('DOMContentLoaded', renderProducts);

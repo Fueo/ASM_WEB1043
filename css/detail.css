@@ -346,6 +346,13 @@
     color: var(--main-black, #000000);
     display: flex;
     margin: 0 auto;
+    margin-top: 32px;
+    cursor: pointer;
+}
+
+.view-more-button:hover {
+    background: #f4f4f4;
+    transition: all 0.3s ease-in-out;
 }
 
 

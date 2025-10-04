@@ -549,6 +549,11 @@ b {
     align-items: center;
   }
 
+  .product-info {
+    cursor: pointer;
+    min-height: 200px;
+  }
+
   .banner2 {
     height: 512px;
     background-image: url(../img/banner2_mobile.png);

@@ -84,8 +84,6 @@ const handleCheckOut = () => {
 
     alert("Checkout successful! 🎉 Order saved.");
     window.location.href = "invoice.html"; // Chuyển sang trang in hóa đơn
-
-    window.location.href = 'involce.html';
 }
 
 

@@ -28,7 +28,7 @@ const productData = {
     ]
 };
 
-// Hàm xử lý logic thêm vào giỏ hàng
+// Function to add item to cart
 const addToCart = (productId) => {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const product = findProductById(productId);
@@ -55,7 +55,7 @@ const addToCart = (productId) => {
     }
 };
 
-// Tìm sản phẩm theo ID
+// Function to find a product by its ID
 const findProductById = (productId) => {
     for (const tab in productData) {
         const product = productData[tab].find(p => p.id === productId);
@@ -102,7 +102,7 @@ const handleBuyNow = (productId) => {
     window.location.href = 'cart.html';
 }
 
-// Hàm thêm sự kiện xử lý logic cho các nút tab
+// Add event listener cho tab
 const AddEventToTabItem = () => {
     document.querySelectorAll(".tab-item").forEach(tab => {
         tab.addEventListener("click", function () {
@@ -118,6 +118,5 @@ const AddEventToTabItem = () => {
 // Khởi động khi load trang
 window.onload = () => {
     AddEventToTabItem();
-    renderProductsByTab("New Arrival", "product-tab");
-    renderProductsByTab("Discount", "product-discount");
+    renderProductsByTab("New Arrival", "product-related");
 }
