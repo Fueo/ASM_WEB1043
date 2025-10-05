@@ -1,9 +1,10 @@
+// Thêm xử lý sự kiện cho nút showInvoice.
 const addEventShowInvoice = () => {
     const viewInvoiceButton = document.querySelector('.view-button');
     const invoiceSuccessSection = document.querySelector('.invoice-success');
     const invoiceContentSection = document.querySelector('.invoice-content');
 
-    if (viewInvoiceButton && invoiceSuccessSection && invoiceContentSection) {
+    if (viewInvoiceButton && invoiceSuccessSection && invoiceContentSection) { // Nếu query đc thì mới add sk
         viewInvoiceButton.addEventListener('click', function (event) {
             event.preventDefault(); // Prevent default action
 
@@ -14,11 +15,13 @@ const addEventShowInvoice = () => {
         console.error('One or more elements not found. Check your selectors.');
     }
 }
+
+// Hàm render giao diện hóa đơn
 function renderInvoice() {
-    const orderHistory = JSON.parse(localStorage.getItem("orderHistory")) || [];
+    const orderHistory = JSON.parse(localStorage.getItem("orderHistory")) || []; // Lấy ra mảng orderHistory trong local storage
     if (orderHistory.length === 0) return;
 
-    const lastOrder = orderHistory[orderHistory.length - 1];
+    const lastOrder = orderHistory[orderHistory.length - 1]; // Chỉ lấy hóa đơn mới nhất
 
     // Hiển thị Customer Info
     document.querySelector(".customer-info").innerHTML = `

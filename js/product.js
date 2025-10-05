@@ -25,21 +25,27 @@ const productData = {
         { img: "iphone4.png", name: "iPhone 13 128GB", price: 749, oldPrice: 799, id: "discount-2" },
         { img: "iphone5.png", name: "iPhone 13 Mini 128GB", price: 649, oldPrice: 699, id: "discount-3" },
         { img: "iphone6.png", name: "iPhone 12 128GB", price: 549, oldPrice: 599, id: "discount-4" }
+    ],
+    "Related": [
+        { img: "iphone3.png", name: "iPhone 14 Pro Max 256GB", price: 1299, oldPrice: 1399, id: "related-1" },
+        { img: "iphone4.png", name: "iPhone 13 128GB", price: 749, oldPrice: 799, id: "related-2" },
+        { img: "iphone5.png", name: "iPhone 13 Mini 128GB", price: 649, oldPrice: 699, id: "related-3" },
+        { img: "iphone6.png", name: "iPhone 12 128GB", price: 549, oldPrice: 599, id: "related-4" }
     ]
 };
 
-// Hàm xử lý logic thêm vào giỏ hàng
+// Hàm xử lý logic thêm vào giỏ hàng. Sẽ được add vào onclick khi render giao diện product
 const addToCart = (productId) => {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const product = findProductById(productId);
+    let cart = JSON.parse(localStorage.getItem('cart')) || []; // Lấy mảng cart từ local storage
+    const product = findProductById(productId); // tìm ra product theo id
 
     if (product) {
-        const existingItem = cart.find(item => item.id === productId);
+        const existingItem = cart.find(item => item.id === productId); // kiểm tra xem sp đã tồn tại trong cart chưa
 
         if (existingItem) {
-            existingItem.quantity += 1;
+            existingItem.quantity += 1; // nếu có rồi Số lượng +1
         } else {
-            cart.push({
+            cart.push({ // không thì add mới
                 id: product.id,
                 name: product.name,
                 price: product.price,
@@ -48,27 +54,27 @@ const addToCart = (productId) => {
             });
         }
 
-        localStorage.setItem('cart', JSON.stringify(cart));
-        updateCartDisplay();
+        localStorage.setItem('cart', JSON.stringify(cart)); // cập nhật lại giỏ hàng trg local storage
+        updateCartDisplay();  // hàm cập nhật lại cart badge trong header trong file header.js
     } else {
         alert('Product not found!');
     }
 };
 
-// Tìm sản phẩm theo ID
+// Tìm sản phẩm theo ID lần lượt theo các key của mảng productData ở trên
 const findProductById = (productId) => {
-    for (const tab in productData) {
-        const product = productData[tab].find(p => p.id === productId);
+    for (const tab in productData) { // cú pháp duyệt theo các key của mảng VD "New Arrival", "BestSeller"
+        const product = productData[tab].find(p => p.id === productId); // tìm ra sản phẩm đầu tiên có id trùng với tham số id truyền vào
         if (product) {
-            return product;
+            return product; // nếu tìm thấy thì return
         }
     }
-    return null;
+    return null; // ko thì trả về rỗng
 };
 
 // Render sản phẩm theo tên tab và append vào ID HTML
 const renderProductsByTab = (tabName, id) => {
-    let products = productData[tabName] || [];
+    let products = productData[tabName] || []; //Lấy dssp theo tabName hoặc có thể gọi là Key. VD: productData["New Arrival"]
 
     let htmlData = products.map(product => {
         let priceHtml = product.oldPrice
@@ -94,9 +100,13 @@ const renderProductsByTab = (tabName, id) => {
             </div>`;
     }).join("");
 
-    document.querySelector(`#${id}`).innerHTML = htmlData;
+    let productContainer = document.querySelector(`#${id}`); // Query container html chứa sp
+    if (productContainer) { // Nếu query đc thì mới add.
+        productContainer.innerHTML = htmlData;
+    }
 };
 
+//Xử lý SK người dùng ấn nút Buy Now. Vừa addtocart vừa đổi sang trang cart.html
 const handleBuyNow = (productId) => {
     addToCart(productId);
     window.location.href = 'cart.html';
@@ -104,20 +114,26 @@ const handleBuyNow = (productId) => {
 
 // Hàm thêm sự kiện xử lý logic cho các nút tab
 const AddEventToTabItem = () => {
+    //Query tất cả các nút tab ở index.html
     document.querySelectorAll(".tab-item").forEach(tab => {
+        // Thêm xử lý sk click cho các tab item
         tab.addEventListener("click", function () {
-            document.querySelectorAll(".tab-item").forEach(t => t.classList.remove("active"));
-            this.classList.add("active");
+            document.querySelectorAll(".tab-item").forEach(t => t.classList.remove("active")); // Xóa tất cả class active của các tab-item
+            this.classList.add("active"); // add lại class active cho item đang được chọn
 
-            const tabName = this.innerHTML;
-            renderProductsByTab(tabName, "product-tab");
+            const tabName = this.innerHTML; // Lấy nội dung của tab đó vd <button>New Arrival</button> => tabName = New Arrival
+            renderProductsByTab(tabName, "product-tab"); // Render lại giao diện theo tabName
         })
     })
 }
 
 // Khởi động khi load trang
 window.onload = () => {
+    //Dành cho trang index.html
     AddEventToTabItem();
     renderProductsByTab("New Arrival", "product-tab");
     renderProductsByTab("Discount", "product-discount");
+
+    //Dành cho trang detail.html
+    renderProductsByTab("Related", "product-related")
 }

@@ -1,3 +1,4 @@
+//File js xử lý giao diện slide trong index.html ở giao diện Mobile
 const popularProducts = [
     [
         "img/products/popular1.png", // image
