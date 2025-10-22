@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "admin",
+        "email": "admin@estore.com",
+        "password": "admin123",
+        "role": 1
+    },
+    {
+        "id": 2,
+        "name": "user",
+        "email": "user@estore.com",
+        "password": "user123",
+        "role": 2
+    }
+]

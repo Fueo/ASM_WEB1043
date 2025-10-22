@@ -139,7 +139,7 @@ header .show {
 }
 
 header .user_block div ul li {
-    padding: 8px 20px 8px 10px;
+    padding: 0;
     color: var(--black);
     width: 100px;
 }
@@ -150,8 +150,10 @@ header .user_block div ul li:hover a {
 }
 
 header .user_block div ul li a {
+    display: block;
     color: var(--black);
     font-size: 1.4rem;
+    padding: 8px 20px 8px 10px;
 }
 
 header .icon-group .icon:hover {

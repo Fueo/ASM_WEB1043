@@ -4,22 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout | E-Store</title>
+    <title>Register | E-Store</title>
     <link rel="icon" href="img/logo_header.png" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/button.css">
-    <link rel="stylesheet" href="css/checkout.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <div class="grid p-relative">
-        <!-- Header -->
         <header class="flex">
             <a href="index.html" class="logo">
                 <img src="img/logo_header.png" alt="logo">
@@ -44,11 +45,11 @@
                     <div class="user_block">
                         <div class="not_logged_in">
                             <ul>
-                                <li><a href="#" class="">Log in</a></li>
-                                <li><a href="#" class="">Sign up</a></li>
+                                <li><a href="login.html" class="">Log in</a></li>
+                                <li><a href="register.html" class="">Sign up</a></li>
                             </ul>
                         </div>
-                        <div class="logged_in">
+                        <div class="logged_in" style="display:none;">
                             <ul>
                                 <li><a href="#" class="">Profile</a></li>
                                 <li><a href="#" class="">Log out</a></li>
@@ -83,7 +84,7 @@
                                 <div class="icon-image flex flex-center"><img src="img/product.png"></div>Products
                             </a>
                         </li>
-                        <li><a href="cart.html" class="item gap-16 active">
+                        <li><a href="cart.html" class="item gap-16">
                                 <div class="icon-image flex flex-center"><img src="img/cart-icon.png"></div>Cart
                                 <div class="badge badge-mobile">1</div>
                             </a></li>
@@ -100,7 +101,7 @@
                                     <li><a href="#" class="">Sign up</a></li>
                                 </ul>
                             </div>
-                            <div class="logged_in">
+                            <div class="logged_in" style="display:none;">
                                 <ul>
                                     <li><a href="#" class="">Profile</a></li>
                                     <li><a href="#" class="">Log out</a></li>
@@ -119,112 +120,44 @@
             </div>
         </header>
 
-        <!-- Your checkout content here -->
-        <main class="checkout-main">
-            <div class="checkout-content flex gap-32">
-                <div class="checkout-address flex-col">
-                    <div class="address-title">Select Address</div>
-                    <div class="address-input">
-                        <div class="address-input-header">
-                            <h3>Add New Address</h3>
-                            <button class="close-address-input">&times;</button>
+        <main class="login-main flex flex-center">
+            <div class="login-container flex flex-col">
+                <h2 class="login-title">Create a New Account</h2>
+
+                <form action="#" method="POST" class="flex flex-col">
+                    <div class="input-group-login">
+                        <div class="input-field">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
                         </div>
-                        <div class="name-phone-group gap-16">
-                            <div class="input-group">
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="name" placeholder="Your Name">
-                            </div>
-                            <div class="input-group">
-                                <label for="phone">Phone:</label>
-                                <input type="text" id="phone" name="phone" placeholder="Your Phone Number">
-                            </div>
+
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter email address" required>
                         </div>
-                        <div class="input-group">
-                            <label for="address">Address:</label>
-                            <input type="text" id="address" name="address" placeholder="Your Address">
+
+                        <div class="input-field">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password"
+                                placeholder="Create password (minimum 6 characters)" required>
                         </div>
-                        <button class="save-address-btn">Save Address</button>
-                    </div>
-                    <div class="address-item">
-                        <input type="radio" name="address" checked>
-                        <div class="address-detail flex-col gap-16">
-                            <div class="address-name">John Doe</div>
-                            <div class="address-line">123 Main St, Springfield, IL 62701</div>
-                            <div class="address-phone">Phone: (555) 123-4567</div>
-                        </div>
-                        <div class="button-groups">
-                            <img src="img/edit.png" alt="edit-icon">
-                            <img src="img/delete.png" alt="delete-icon">
+
+                        <div class="input-field">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password"
+                                placeholder="Re-enter password" required>
                         </div>
                     </div>
-                    <button class="add-new-btn"><img src="img/new.png"> Add New Address</button>
 
-                    <!-- Payment Method Selection -->
-                    <div class="payment-method-group">
-                        <div class="payment-method-title">Payment Method</div>
-                        <div class="payment-options">
-                            <label class="payment-method-item">
-                                <input type="radio" name="paymentMethod" value="cod" checked>
-                                <span>Cash on Delivery</span>
-                            </label>
-                            <label class="payment-method-item">
-                                <input type="radio" name="paymentMethod" value="creditCard">
-                                <span>Credit Card</span>
-                            </label>
+                    <button type="submit" class="login-btn">REGISTER</button>
+                </form>
 
-                            <label class="payment-method-item">
-                                <input type="radio" name="paymentMethod" value="applePay">
-                                <span>Apple Pay</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="checkout-order">
-                    <div class="order-summary">
-                        <div class="summary-title">Summary</div>
-
-                        <div class="summary-shipping">
-                            <div class="shipping-label">Shipment</div>
-                            <div class="shipping-value">$29</div>
-                        </div>
-
-                        <div class="summary-subtotal">
-                            <div class="subtotal-label">Subtotal</div>
-                            <div class="subtotal-value">$2347</div>
-                        </div>
-
-                        <div class="summary-tax">
-                            <div class="tax-label not-important-price">Estimated Tax</div>
-                            <div class="tax-value not-important-price">$50</div>
-                        </div>
-
-                        <div class="summary-shipping-handling">
-                            <div class="shipping-handling-label not-important-price">Estimated shipping & Handling</div>
-                            <div class="shipping-handling-value not-important-price">$29</div>
-                        </div>
-
-                        <div class="summary-discount">
-                            <div class="discount-label">Discount</div>
-                            <div class="discount-value">-$234</div>
-                        </div>
-
-                        <div class="summary-total">
-                            <div class="total-label">Total</div>
-                            <div class="total-value" style="font-size: 1.6rem; font-weight: 600;">$2426</div>
-                        </div>
-
-                        <div class="summary-buttons">
-                            <button class="back-button" onclick="window.location.href='cart.html'">Back</button>
-                            <button class="pay-button" onclick="handleCheckOut()">Checkout</button>
-                        </div>
-                    </div>
+                <div class="register-link">
+                    Already have an account? <a href="login.html">Log in now</a>
                 </div>
             </div>
-
         </main>
 
-        <!-- Footer -->
         <footer>
             <div class="footer-content flex">
                 <div class="footer-col flex-col">
@@ -232,7 +165,8 @@
                         <img src="img/logo.png" alt="logo">
                     </div>
                     <p>We are a residential interior design firm located in Portland. Our boutique-studio offers more
-                        than</p>
+                        than
+                    </p>
                 </div>
                 <div class="footer-col flex-col">
                     <div class="footer-title">Services</div>
@@ -262,13 +196,12 @@
                 <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
                 <a href="#"><img src="img/Tiktok.png" alt="Tiktok"></a>
                 <a href="#"><img src="img/Instagram.png" alt="Instagram"></a>
+
             </div>
         </footer>
     </div>
-    <script src="js/header.js"></script>
-    <script src="js/address.js"></script>
-
-    <script src="js/checkout.js"></script>
 </body>
+<script src="js/header.js"></script>
+<script src="js/register.js" type="module"></script>
 
 </html>

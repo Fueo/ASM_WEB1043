@@ -1,0 +1,138 @@
+{
+    "New Arrival": [
+        {
+            "id": 20,
+            "name": "iPhone 12 128GB",
+            "price": 549,
+            "img": "iphone6.png",
+            "category_id": 1,
+            "discount_percentage": 20
+        },
+        {
+            "id": 19,
+            "name": "iPhone 13 Mini 128GB",
+            "price": 649,
+            "img": "iphone5.png",
+            "category_id": 1,
+            "discount_percentage": 20
+        },
+        {
+            "id": 18,
+            "name": "iPhone 13 128GB",
+            "price": 749,
+            "img": "iphone4.png",
+            "category_id": 1,
+            "discount_percentage": 20
+        },
+        {
+            "id": 17,
+            "name": "iPhone 14 Pro Max 256GB",
+            "price": 1299,
+            "img": "iphone3.png",
+            "category_id": 1,
+            "discount_percentage": 15
+        }
+    ],
+    "Bestseller": [
+        {
+            "id": 1,
+            "name": "iPhone 14 Pro 128GB",
+            "price": 999,
+            "img": "iphone.png",
+            "category_id": 1,
+            "discount_percentage": 0
+        },
+        {
+            "id": 7,
+            "name": "Apple AirPods Pro (2nd Gen)",
+            "price": 249,
+            "img": "airpod.png",
+            "category_id": 3,
+            "discount_percentage": 0
+        },
+        {
+            "id": 6,
+            "name": "iPhone 14 Pro Max 128GB",
+            "price": 1199,
+            "img": "iphone2.png",
+            "category_id": 1,
+            "discount_percentage": 0
+        },
+        {
+            "id": 10,
+            "name": "Apple AirPods Max",
+            "price": 549,
+            "img": "headphones.png",
+            "category_id": 3,
+            "discount_percentage": 0
+        }
+    ],
+    "Featured Products": [
+        {
+            "id": 9,
+            "name": "Canon EOS R5 Mirrorless Camera",
+            "price": 3899,
+            "img": "camera.png",
+            "category_id": 6,
+            "discount_percentage": 0
+        },
+        {
+            "id": 6,
+            "name": "iPhone 14 Pro Max 128GB",
+            "price": 1199,
+            "img": "iphone2.png",
+            "category_id": 1,
+            "discount_percentage": 0
+        },
+        {
+            "id": 12,
+            "name": "Samsung Galaxy S22 Ultra 256GB",
+            "price": 1199,
+            "img": "galaxyz.png",
+            "category_id": 2,
+            "discount_percentage": 0
+        },
+        {
+            "id": 13,
+            "name": "iPhone 14 Pro Max 256GB",
+            "price": 1299,
+            "img": "iphone3.png",
+            "category_id": 1,
+            "discount_percentage": 20
+        }
+    ],
+    "Discount": [
+        {
+            "id": 15,
+            "name": "iPhone 13 Mini 128GB",
+            "price": 649,
+            "img": "iphone5.png",
+            "category_id": 1,
+            "discount_percentage": 30
+        },
+        {
+            "id": 14,
+            "name": "iPhone 13 128GB",
+            "price": 749,
+            "img": "iphone4.png",
+            "category_id": 1,
+            "discount_percentage": 25
+        },
+        {
+            "id": 13,
+            "name": "iPhone 12 Pro Max 256GB",
+            "price": 1299,
+            "img": "iphone2.png",
+            "category_id": 1,
+            "discount_percentage": 50
+        },
+        {
+            "id": 18,
+            "name": "iPhone 13 256GB",
+            "price": 749,
+            "img": "iphone11.png",
+            "category_id": 1,
+            "discount_percentage": 20
+        }
+    ]
+}

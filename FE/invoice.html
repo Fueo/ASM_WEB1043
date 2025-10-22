@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice | E-Store</title>
+    <link rel="icon" href="img/logo_header.png" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/invoice.css">
+    <!-- Add specific invoice styles here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="grid p-relative">
+        <!-- Header -->
+        <header class="flex">
+            <a href="index.html" class="logo">
+                <img src="img/logo_header.png" alt="logo">
+            </a>
+            <div class="search-group flex">
+                <img src="img/search_icon.png" alt="search-icon">
+                <input type="text" placeholder="Search">
+            </div>
+            <nav class="navlink-group">
+                <ul class="gap-32">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    <li><a href="products.html" class="nav-item">Products</a></li>
+                </ul>
+            </nav>
+            <div class="icon-group gap-24 flex">
+                <a href="cart.html" class="icon flex flex-center">
+                    <img src="img/cart-icon.png" />
+                    <div class="badge">1</div>
+                </a>
+                <div href="#" class="icon flex flex-center" onclick="toggleUserBlock()">
+                    <img src="img/user-icon.png" />
+                    <div class="user_block">
+                        <div class="not_logged_in">
+                            <ul>
+                                <li><a href="login.html" class="">Log in</a></li>
+                                <li><a href="register.html" class="">Sign up</a></li>
+                            </ul>
+                        </div>
+                        <div class="logged_in">
+                            <ul>
+                                <li><a href="#" class="">Profile</a></li>
+                                <li><a href="#" class="">Log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <img src="img/menu-bar.png" alt="menu-icon" onclick="toggleMenu()">
+                <div class="badge">1</div>
+                <div class="mobile-menu flex-col">
+                    <div class="flex">
+                        <a href="index.html" class="logo">
+                            <img src="img/logo_header.png" alt="logo">
+                        </a>
+                        <div class="back-btn" onclick="toggleMenu()">&#60;</div>
+                    </div>
+
+                    <div class="search">
+                        <img src="img/search_icon.png" alt="search-icon">
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <ul class="nav-group gap-16 flex-col">
+                        <li>
+                            <a href="index.html" class="item gap-16">
+                                <div class="icon-image flex flex-center"><img src="img/home.png"></div>Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html" class="item gap-16">
+                                <div class="icon-image flex flex-center"><img src="img/product.png"></div>Products
+                            </a>
+                        </li>
+                        <li><a href="cart.html" class="item gap-16 active">
+                                <div class="icon-image flex flex-center"><img src="img/cart-icon.png"></div>Cart
+                                <div class="badge badge-mobile">1</div>
+                            </a></li>
+                        <li>
+                            <div href="#" class="item gap-16 account_mobile" onclick="toggleUserBlock()">
+                                <div class="icon-image flex flex-center"><img src="img/user-icon.png"></div>User
+                                <div class="arrow-account">&#129170;</div>
+                            </div>
+                        </li>
+                        <div class="user_block user_block_mobile">
+                            <div class="not_logged_in">
+                                <ul>
+                                    <li><a href="login.html" class="">Log in</a></li>
+                                    <li><a href="register.html" class="">Sign up</a></li>
+                                </ul>
+                            </div>
+                            <div class="logged_in">
+                                <ul>
+                                    <li><a href="#" class="">Profile</a></li>
+                                    <li><a href="#" class="">Log out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ul>
+
+                    <div class="contact-us gap-16 flex flex-center">
+                        <a href="#"><img src="img/Twitter-menu.png" alt="Twitter"></a>
+                        <a href="#"><img src="img/facebook-menu.png" alt="Facebook"></a>
+                        <a href="#"><img src="img/Tiktok-menu.png" alt="Tiktok"></a>
+                        <a href="#"><img src="img/Instagram-menu.png" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Invoice Content -->
+        <main class="invoice-main">
+            <div class="invoice-success">
+                <div class="success-icon">
+                    <img src="img/success-tick.png" alt="Success">
+                </div>
+                <h2>Order Placed Successfully!</h2>
+                <p>Thank you for your order! We appreciate your business.</p>
+                <button class="back-to-home-button" onclick="window.location.href='index.html'">Back to Home</button>
+                <button class="view-button">View Invoice</button>
+            </div>
+            <div class="invoice-content">
+                <div class="invoice-header">
+                    <div class="company-logo">
+                        <img src="img/logo_header.png" alt="Company Logo" class="company-logo">
+
+                    </div>
+                    <div class="company-infor">
+                        <p>Cyber Tech Store Inc.</p>
+                        <p>500 Fifth Avenue, New York, NY 10110, USA</p>
+                        <p>Email: support@cybertechstore.com | Hotline: +1 (212) 555-7890</p>
+                    </div>
+                </div>
+
+                <div class="customer-order-info">
+                    <div class="customer-info">
+                        <h3>Customer Information</h3>
+                        <p>Name: Nguyen Van A</p>
+                        <p>Phone: 0123456789</p>
+                        <p>Email: nguyenvana@example.com</p>
+                        <p>Address: 123 ABC Street, Ward 1, District 1, Ho Chi Minh City</p>
+                    </div>
+                    <div class="order-info">
+                        <h3>Order Information</h3>
+                        <p>Order Date: 30/09/2025</p>
+                        <p>Payment Method: Cash on Delivery (COD)</p>
+                        <p>Status: <span class="status-confirmed">Confirmed</span></p>
+                    </div>
+                </div>
+
+                <table class="invoice-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apple iPhone 14 Pro Max 128Gb</td>
+                            <td>1</td>
+                            <td>$1399</td>
+                            <td>$1399</td>
+                        </tr>
+                        <tr>
+                            <td>AirPods Max Silver</td>
+                            <td>1</td>
+                            <td>$549</td>
+                            <td>$549</td>
+                        </tr>
+                        <tr>
+                            <td>Apple Watch Series 9 GPS 41mm</td>
+                            <td>1</td>
+                            <td>$399</td>
+                            <td>$399</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="right-align">Shipment</td>
+                            <td>$29</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="right-align">Subtotal</td>
+                            <td>$2347</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="right-align">Estimated Tax</td>
+                            <td>$50</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="right-align">Estimated Shipping & Handling</td>
+                            <td>$29</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="right-align">Discount</td>
+                            <td>-$234</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="right-align total">Total</td>
+                            <td class="total" style="font-size: 1.6rem; font-weight: 600;">$2426</td>
+                        </tr>
+                    </tbody>
+                    </tbody>
+                </table>
+
+                <div class="invoice-footer">
+                    <p>Thank you for shopping at CyberTech <span style="color: blue;">💙</span></p>
+                    <p>For any questions, please contact Hotline: +1 (212) 555-7890</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content flex">
+                <div class="footer-col flex-col">
+                    <div class="footer-title">
+                        <img src="img/logo.png" alt="logo">
+                    </div>
+                    <p>We are a residential interior design firm located in Portland. Our boutique-studio offers more
+                        than</p>
+                </div>
+                <div class="footer-col flex-col">
+                    <div class="footer-title">Services</div>
+                    <ul>
+                        <li>Bonus program</li>
+                        <li>Gift cards</li>
+                        <li>Credit and payment</li>
+                        <li>Service contracts</li>
+                        <li>Non-cash account</li>
+                        <li>Payment</li>
+                    </ul>
+                </div>
+                <div class="footer-col flex-col">
+                    <div class="footer-title">Assistance to the buyer</div>
+                    <ul>
+                        <li>Find an order</li>
+                        <li>Terms of delivery</li>
+                        <li>Exchange and return of goods</li>
+                        <li>Guarantee</li>
+                        <li>Frequently asked questions</li>
+                        <li>Terms of use of the site</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/Tiktok.png" alt="Tiktok"></a>
+                <a href="#"><img src="img/Instagram.png" alt="Instagram"></a>
+            </div>
+        </footer>
+    </div>
+    <script src="js/header.js"></script>
+    <script src="js/invoice.js" type="module"></script>
+</body>
+
+</html>

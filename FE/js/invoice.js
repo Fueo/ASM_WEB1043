@@ -1,3 +1,9 @@
+import { initializeOrder } from "./data/fetchData.js";
+
+const initApp = async () => {
+    addEventShowInvoice();
+    await renderInvoice();
+}
 // Thêm xử lý sự kiện cho nút showInvoice.
 const addEventShowInvoice = () => {
     const viewInvoiceButton = document.querySelector('.view-button');
@@ -17,12 +23,11 @@ const addEventShowInvoice = () => {
 }
 
 // Hàm render giao diện hóa đơn
-function renderInvoice() {
-    const orderHistory = JSON.parse(localStorage.getItem("orderHistory")) || []; // Lấy ra mảng orderHistory trong local storage
-    if (orderHistory.length === 0) return;
+const renderInvoice = async () => {
+    const orderHistory = await initializeOrder(); // Lấy ra mảng orderHistory từ server
+    if (orderHistory.orders.length === 0) return;
 
-    const lastOrder = orderHistory[orderHistory.length - 1]; // Chỉ lấy hóa đơn mới nhất
-
+    const lastOrder = orderHistory.orders[orderHistory.orders.length - 1]; // Chỉ lấy hóa đơn mới nhất
     // Hiển thị Customer Info
     document.querySelector(".customer-info").innerHTML = `
         <h3>Customer Information</h3>
@@ -67,6 +72,5 @@ function renderInvoice() {
 
 // Gọi khi load trang
 document.addEventListener('DOMContentLoaded', function () {
-    addEventShowInvoice();
-    renderInvoice();
+    initApp();
 });

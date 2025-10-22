@@ -1,3 +1,4 @@
+
 // ===== Global =====
 let selectedVoucher = null; // Biến lưu voucher đang chọn
 
@@ -23,7 +24,6 @@ const renderCart = () => {
           <p class="empty">Oops! Your cart is empty!</p>
           <button class="back-button" onclick="window.location.href='index.html'">Back to Home</button>
         </section>`;
-        updateOrderSummary(0, 0, 0, 0, 0); // Cập nhật lại phần tóm tắt đơn hàng về 0
         return;
     }
 
@@ -37,11 +37,11 @@ const renderCart = () => {
                     <div class="item-id">#${item.id}</div>
                 </div>
                 <div class="item-controls">
-                    <button class="qty-btn" onclick="changeQuantity('${item.id}', -1)">-</button> 
+                    <button class="qty-btn" onclick="changeQuantity(${item.id}, -1)">-</button> 
                     <input type="number" value="${item.quantity}" readonly>
-                    <button class="qty-btn" onclick="changeQuantity('${item.id}', 1)">+</button>
+                    <button class="qty-btn" onclick="changeQuantity(${item.id}, 1)">+</button>
                     <div class="item-price">$${item.price * item.quantity}</div>
-                    <button class="remove-btn" onclick="removeFromCart('${item.id}')">×</button>
+                    <button class="remove-btn" onclick="removeFromCart(${item.id})">×</button>
                 </div>
             </div>
         </div>
@@ -55,6 +55,7 @@ const renderCart = () => {
     const total = subtotal + tax + shipping - discount; // Tổng cuối cùng
 
     updateOrderSummary(subtotal, total, tax, shipping, discount); // Cập nhật phần tóm tắt đơn hàng bằng các giá trị đã tính toán
+    updateCartDisplay(); // Cập nhật hiển thị badge giỏ hàng trong header
 };
 
 // Hàm cập nhật phần tóm tắt đơn hàng với các giá trị đã tính toán là tham số truyền vào

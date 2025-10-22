@@ -1,0 +1,114 @@
+/* CSS DÀNH RIÊNG CHO TRANG ĐĂNG NHẬP */
+.login-main {
+    min-height: calc(100vh - 88px - 504px);
+    /* Tính toán cho Header và Footer PC */
+    background-color: var(--white-gray);
+    padding: 80px 11%;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Điều chỉnh min-height cho mobile, không cần trừ height cụ thể vì footer height: auto */
+    .login-main {
+        min-height: calc(100vh - 88px);
+        padding: 40px 4.2%;
+    }
+}
+
+.login-container {
+    width: 400px;
+    max-width: 100%;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.login-title {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.input-group-login {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.input-field label {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    color: #444;
+    transition: border-color 0.2s;
+}
+
+.input-field input:focus {
+    border-color: var(--black);
+    outline: none;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 24px;
+}
+
+.forgot-password a {
+    font-size: 1.4rem;
+    color: #43454D;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+    color: var(--black);
+}
+
+.login-btn {
+    /* Tái sử dụng phong cách nút fill black */
+    width: 100%;
+    padding: 12px 24px;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #1b1b1b;
+    /* Màu hover tối hơn, đồng bộ với checkout/cart.css */
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 1.4rem;
+}
+
+.register-link a {
+    color: var(--black);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

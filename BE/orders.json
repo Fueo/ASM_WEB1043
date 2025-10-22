@@ -1,0 +1,114 @@
+[
+  {
+    "id": "ORD-1761006302634",
+    "date": "10/21/2025, 7:25:02 AM",
+    "items": [
+      {
+        "id": 19,
+        "name": "iPhone 13 Mini 128GB",
+        "price": 519,
+        "image": "iphone5.png",
+        "quantity": 1
+      }
+    ],
+    "summary": {
+      "subtotal": 519,
+      "tax": 50,
+      "shipping": 29,
+      "discount": 103,
+      "total": 495
+    },
+    "customer": {
+      "name": "Liêu Thiên Hạo",
+      "phone": "0912345678",
+      "address": "Lac Long Quan",
+      "selected": true
+    },
+    "paymentMethod": "cod",
+    "status": "Confirmed"
+  },
+  {
+    "id": "ORD-1761006744852",
+    "date": "10/21/2025, 7:32:24 AM",
+    "items": [
+      {
+        "id": 19,
+        "name": "iPhone 13 Mini 128GB",
+        "price": 519,
+        "image": "iphone5.png",
+        "quantity": 1
+      }
+    ],
+    "summary": {
+      "subtotal": 519,
+      "tax": 50,
+      "shipping": 29,
+      "discount": 51,
+      "total": 547
+    },
+    "customer": {
+      "name": "Mua 2",
+      "phone": "0912345678",
+      "address": "Lac Long Quan",
+      "selected": true
+    },
+    "paymentMethod": "creditCard",
+    "status": "Confirmed"
+  },
+  {
+    "id": "ORD-1761006825024",
+    "date": "10/21/2025, 7:33:45 AM",
+    "items": [
+      {
+        "id": 18,
+        "name": "iPhone 13 128GB",
+        "price": 599,
+        "image": "iphone4.png",
+        "quantity": 1
+      }
+    ],
+    "summary": {
+      "subtotal": 599,
+      "tax": 50,
+      "shipping": 29,
+      "discount": 89,
+      "total": 589
+    },
+    "customer": {
+      "name": "Liêu Thiên Hạo",
+      "phone": "0912345678",
+      "address": "Lac Long Quan",
+      "selected": true
+    },
+    "paymentMethod": "cod",
+    "status": "Confirmed"
+  },
+  {
+    "id": "ORD-1761008971535",
+    "date": "10/21/2025, 8:09:31 AM",
+    "items": [
+      {
+        "id": 17,
+        "name": "iPhone 14 Pro Max 256GB",
+        "price": 1104,
+        "image": "iphone3.png",
+        "quantity": 1
+      }
+    ],
+    "summary": {
+      "subtotal": 1104,
+      "tax": 50,
+      "shipping": 29,
+      "discount": 220,
+      "total": 963
+    },
+    "customer": {
+      "name": "Mua 2",
+      "phone": "0912345678",
+      "address": "Lac Long Quan",
+      "selected": true
+    },
+    "paymentMethod": "cod",
+    "status": "Confirmed"
+  }
+]

@@ -64,10 +64,6 @@
     object-fit: contain;
 }
 
-.detail-imgs .thumbnail.active {
-    /* Highlight active thumbnail */
-}
-
 .detail-content {
     width: 60%;
     /* Adjust as needed */
@@ -432,6 +428,18 @@
     font-weight: 600;
     text-align: center;
     color: var(--black);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-tabs .product-grid .product-card .old-price {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+    text-align: center;
+    color: #6c757d;
+    text-decoration: line-through;
+    margin-top: 4px;
 }
 
 @media screen and (max-width: 768px) {

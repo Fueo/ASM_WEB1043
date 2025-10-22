@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Smartphones (iPhone)"
+    },
+    {
+        "id": 2,
+        "name": "Smartphones (Other)"
+    },
+    {
+        "id": 3,
+        "name": "Audio & Headphones"
+    },
+    {
+        "id": 4,
+        "name": "Tablets & iPads"
+    },
+    {
+        "id": 5,
+        "name": "Smartwatches"
+    },
+    {
+        "id": 6,
+        "name": "Cameras & Video"
+    }
+]

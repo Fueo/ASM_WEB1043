@@ -4,22 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart | E-Store</title>
+    <title>Log In | E-Store</title>
     <link rel="icon" href="img/logo_header.png" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/button.css">
-    <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <div class="grid p-relative">
-        <!-- Header -->
         <header class="flex">
             <a href="index.html" class="logo">
                 <img src="img/logo_header.png" alt="logo">
@@ -44,11 +45,11 @@
                     <div class="user_block">
                         <div class="not_logged_in">
                             <ul>
-                                <li><a href="#" class="">Log in</a></li>
-                                <li><a href="#" class="">Sign up</a></li>
+                                <li><a href="login.html" class="">Log in</a></li>
+                                <li><a href="register.html" class="">Sign up</a></li>
                             </ul>
                         </div>
-                        <div class="logged_in">
+                        <div class="logged_in" style="display:none;">
                             <ul>
                                 <li><a href="#" class="">Profile</a></li>
                                 <li><a href="#" class="">Log out</a></li>
@@ -83,7 +84,7 @@
                                 <div class="icon-image flex flex-center"><img src="img/product.png"></div>Products
                             </a>
                         </li>
-                        <li><a href="cart.html" class="item gap-16 active">
+                        <li><a href="cart.html" class="item gap-16">
                                 <div class="icon-image flex flex-center"><img src="img/cart-icon.png"></div>Cart
                                 <div class="badge badge-mobile">1</div>
                             </a></li>
@@ -100,7 +101,7 @@
                                     <li><a href="#" class="">Sign up</a></li>
                                 </ul>
                             </div>
-                            <div class="logged_in">
+                            <div class="logged_in" style="display:none;">
                                 <ul>
                                     <li><a href="#" class="">Profile</a></li>
                                     <li><a href="#" class="">Log out</a></li>
@@ -119,60 +120,37 @@
             </div>
         </header>
 
-        <!-- Your existing cart content here -->
-        <main class="cart-main">
-            <div class="cart-content">
-                <h1>Shopping Cart</h1>
-                <div class="cart-layout">
-                    <!-- Cart Items -->
-                    <div class="cart-items">
+        <main class="login-main flex flex-center">
+            <div class="login-container flex flex-col">
+                <h2 class="login-title">Log in to your Account</h2>
+
+                <form action="#" method="POST" class="flex flex-col">
+                    <div class="input-group-login">
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter your password"
+                                required>
+                        </div>
                     </div>
 
-                    <!-- Order Summary -->
-                    <div class="order-summary">
-                        <h2>Order Summary</h2>
-                        <div class="promo-code">
-                            <label>Discount code / Promo code</label>
-                            <div class="select-group">
-                                <select class="promo-select">
-                                    <option value="" selected disabled>Select promo code</option>
-                                </select>
-                                <span class="dropdown-arrow">▼</span>
-                            </div>
-                        </div>
-                        <div class="summary-details flex-col gap-16">
-                            <div class="summary-row">
-                                <span>Subtotal</span>
-                                <span>$2347</span>
-                            </div>
-                            <div class="summary-row">
-                                <span class="not-important-price">Estimated Tax</span>
-                                <span class="not-important-price">$50</span>
-                            </div>
-                            <div class="summary-row">
-                                <span class="not-important-price">Estimated Shipping & Handling</span>
-                                <span class="not-important-price">$29</span>
-                            </div>
-                            <div class="summary-row">
-                                <span>Discount</span>
-                                <span>-$234</span>
-                            </div>
-                            <div class="summary-total">
-                                <span>Total</span>
-                                <span>$2426</span>
-                            </div>
-                        </div>
-                        <div class="summary-buttons">
-                            <button class="back-button" onclick="window.location.href='index.html'">Back</button>
-                            <button class="pay-button" onclick="window.location.href='checkout.html'">To
-                                checkout</button>
-                        </div>
+                    <div class="forgot-password">
+                        <a href="#">Forgot password?</a>
                     </div>
+
+                    <button type="submit" class="login-btn">LOG IN</button>
+                </form>
+
+                <div class="register-link">
+                    Don't have an account yet? <a href="register.html">Register now</a>
                 </div>
             </div>
         </main>
 
-        <!-- Footer -->
         <footer>
             <div class="footer-content flex">
                 <div class="footer-col flex-col">
@@ -180,7 +158,8 @@
                         <img src="img/logo.png" alt="logo">
                     </div>
                     <p>We are a residential interior design firm located in Portland. Our boutique-studio offers more
-                        than</p>
+                        than
+                    </p>
                 </div>
                 <div class="footer-col flex-col">
                     <div class="footer-title">Services</div>
@@ -210,12 +189,11 @@
                 <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
                 <a href="#"><img src="img/Tiktok.png" alt="Tiktok"></a>
                 <a href="#"><img src="img/Instagram.png" alt="Instagram"></a>
+
             </div>
         </footer>
     </div>
-    <script src="js/voucher.js"></script>
-    <script src="js/header.js"></script>
-    <script src="js/cart.js"></script>
 </body>
+<script src="js/header.js"></script>
 
 </html>
