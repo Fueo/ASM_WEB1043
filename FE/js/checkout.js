@@ -1,4 +1,3 @@
-
 // Lấy dữ liệu từ localStorage
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
 const orderSummary = JSON.parse(localStorage.getItem("orderSummary")) || null;
@@ -80,7 +79,17 @@ const handleCheckOut = async () => {
         return;
     }
 
-    const selectedAddress = addresses.find(addr => addr.selected) || addresses[0];
+    let selectedAddress = addresses.find(addr => addr.selected) || addresses[0];
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user) {
+        selectedAddress.idAccount = user.id;
+    }
+
+
+    if (!selectedAddress) {
+        alert("Please select a shipping address!");
+        return;
+    }
 
     const order = {
         id: "ORD-" + Date.now(),

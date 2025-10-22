@@ -24,7 +24,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
 
     // ✅ Gửi yêu cầu POST đến server
     try {
-        const newAccount = { email, password, role: 2 }; // role: 2 = user
+        const newAccount = { name, email, password, role: 2 }; // role: 2 = user
 
         const res = await fetch('http://localhost:3000/api/add-account', {
             method: 'POST',

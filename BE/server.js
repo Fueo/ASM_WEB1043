@@ -27,7 +27,7 @@ const CATEGORY_FILE = path.join(__dirname, 'categories.json');
 const readJSON = (filePath) => {
     try {
         const data = fs.readFileSync(filePath, 'utf8');
-        return JSON.parse(data);
+        return JSON.parse(data || '[]');
     } catch (error) {
         return [];
     }
@@ -76,6 +76,7 @@ app.get('/api/orders-history', (req, res) => {
 // 👥 API: Danh sách tài khoản
 // ==============================
 app.get('/api/account', (req, res) => {
+    console.log('📩 Nhận POST /api/add-account');
     try {
         const accounts = readJSON(ACCOUNTS_FILE);
         res.json(accounts);
@@ -91,7 +92,7 @@ app.get('/api/account', (req, res) => {
 app.post('/api/add-account', (req, res) => {
     const newAccount = req.body;
 
-    if (!newAccount || !newAccount.email || !newAccount.password || !newAccount.role) {
+    if (!newAccount || !newAccount.email || !newAccount.password || !newAccount.role || !newAccount.name) {
         return res.status(400).json({ success: false, message: 'Thiếu thông tin tài khoản.' });
     }
 
@@ -139,7 +140,7 @@ app.post('/api/login', (req, res) => {
         res.json({
             success: true,
             message: 'Đăng nhập thành công.',
-            user: { id: user.id, email: user.email, role: user.role }
+            user: { id: user.id, email: user.email, name: user.name, role: user.role }
         });
     } catch (error) {
         console.error('❌ Lỗi khi đăng nhập:', error);

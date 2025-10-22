@@ -276,6 +276,7 @@ b {
 }
 
 .product-tabs .product-grid .product-card {
+  position: relative;
   width: calc(25% - 16px);
   border-radius: 0.9rem;
   padding: 2.4rem 1.6rem;
@@ -338,6 +339,36 @@ b {
   line-height: 2.4rem;
   font-weight: 600;
   color: var(--black);
+}
+
+.sales-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--black);
+  /* Dùng màu đen chủ đạo */
+  color: var(--white);
+  padding: 4px 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  /* Bo góc cho đẹp, khớp với bo góc 0.9rem của card */
+  border-top-left-radius: 0.9rem;
+  border-bottom-right-radius: 0.9rem;
+
+  /* Đảm bảo nó luôn ở trên cùng */
+  z-index: 2;
+}
+
+/* 2. Định dạng cho Rating (nằm dưới giá) */
+.product-rating {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #333;
+  /* Màu chữ tối, không quá nổi bật */
+  text-align: center;
+  margin-top: 8px;
+  /* Tạo khoảng cách với giá */
 }
 
 .popular-products .popular-light,

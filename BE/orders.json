@@ -1,7 +1,7 @@
 [
   {
-    "id": "ORD-1761006302634",
-    "date": "10/21/2025, 7:25:02 AM",
+    "id": "ORD-1761131733216",
+    "date": "10/22/2025, 6:15:33 PM",
     "items": [
       {
         "id": 19,
@@ -15,98 +15,44 @@
       "subtotal": 519,
       "tax": 50,
       "shipping": 29,
-      "discount": 103,
-      "total": 495
+      "discount": 0,
+      "total": 598
     },
     "customer": {
       "name": "Liêu Thiên Hạo",
       "phone": "0912345678",
       "address": "Lac Long Quan",
-      "selected": true
+      "selected": true,
+      "idAccount": 1
     },
     "paymentMethod": "cod",
     "status": "Confirmed"
   },
   {
-    "id": "ORD-1761006744852",
-    "date": "10/21/2025, 7:32:24 AM",
+    "id": "ORD-1761143047682",
+    "date": "10/22/2025, 9:24:07 PM",
     "items": [
       {
-        "id": 19,
-        "name": "iPhone 13 Mini 128GB",
-        "price": 519,
-        "image": "iphone5.png",
-        "quantity": 1
-      }
-    ],
-    "summary": {
-      "subtotal": 519,
-      "tax": 50,
-      "shipping": 29,
-      "discount": 51,
-      "total": 547
-    },
-    "customer": {
-      "name": "Mua 2",
-      "phone": "0912345678",
-      "address": "Lac Long Quan",
-      "selected": true
-    },
-    "paymentMethod": "creditCard",
-    "status": "Confirmed"
-  },
-  {
-    "id": "ORD-1761006825024",
-    "date": "10/21/2025, 7:33:45 AM",
-    "items": [
-      {
-        "id": 18,
-        "name": "iPhone 13 128GB",
-        "price": 599,
-        "image": "iphone4.png",
-        "quantity": 1
-      }
-    ],
-    "summary": {
-      "subtotal": 599,
-      "tax": 50,
-      "shipping": 29,
-      "discount": 89,
-      "total": 589
-    },
-    "customer": {
-      "name": "Liêu Thiên Hạo",
-      "phone": "0912345678",
-      "address": "Lac Long Quan",
-      "selected": true
-    },
-    "paymentMethod": "cod",
-    "status": "Confirmed"
-  },
-  {
-    "id": "ORD-1761008971535",
-    "date": "10/21/2025, 8:09:31 AM",
-    "items": [
-      {
-        "id": 17,
+        "id": 13,
         "name": "iPhone 14 Pro Max 256GB",
-        "price": 1104,
+        "price": 1039,
         "image": "iphone3.png",
         "quantity": 1
       }
     ],
     "summary": {
-      "subtotal": 1104,
+      "subtotal": 1039,
       "tax": 50,
       "shipping": 29,
-      "discount": 220,
-      "total": 963
+      "discount": 0,
+      "total": 1118
     },
     "customer": {
-      "name": "Mua 2",
+      "name": "Liêu Thiên Hạo",
       "phone": "0912345678",
       "address": "Lac Long Quan",
-      "selected": true
+      "selected": true,
+      "idAccount": 1
     },
     "paymentMethod": "cod",
     "status": "Confirmed"

@@ -1,0 +1,487 @@
+/* Các biến và class cơ bản đã được định nghĩa trong base.css */
+
+/* Cấu trúc chính của trang profile */
+.profile-main {
+    min-height: calc(100vh - 88px - 504px);
+    /* Giống như login-main, trừ header và footer */
+    background-color: var(--white-gray);
+    padding: 40px 11%;
+    /* Padding cho PC */
+}
+
+.profile-container {
+    display: flex;
+    gap: 32px;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+}
+
+/* Menu Sidebar */
+.profile-sidebar {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-right: 24px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.profile-sidebar h2 {
+    font-size: 2.0rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.profile-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--black);
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.profile-nav-item:hover:not(.active) {
+    background-color: #f0f0f0;
+}
+
+.profile-nav-item.active {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* Nội dung các tab */
+.profile-content {
+    flex: 1;
+    padding: 0 16px;
+}
+
+.profile-tab {
+    display: none;
+}
+
+.profile-tab.active {
+    display: block;
+}
+
+/* Thiết kế cho tab Thông tin Tài khoản */
+.account-info-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Tái sử dụng .input-group từ checkout.css/login.css */
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.input-group input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    color: #444;
+}
+
+.profile-tab .title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 16px;
+}
+
+.save-btn {
+    margin-top: 10px;
+    padding: 12px 24px;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    width: fit-content;
+}
+
+/* Thiết kế cho tab Lịch sử Hóa đơn (dựa trên invoice.css) */
+.order-history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* === BẮT ĐẦU: SỬA ĐỔI CHO .ORDER-ITEM === */
+.order-item {
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    /* Xóa display: flex ở đây */
+    background-color: #f9f9f9;
+    transition: background-color 0.2s;
+}
+
+/* Thêm style khi xổ xuống */
+.order-item.expanded {
+    background-color: var(--white);
+}
+
+/* Lớp bọc mới cho phần tóm tắt */
+.order-summary-view {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* === KẾT THÚC: SỬA ĐỔI CHO .ORDER-ITEM === */
+
+
+.order-info-group {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.order-info-group p {
+    font-size: 1.4rem;
+}
+
+.order-id {
+    font-weight: 600;
+}
+
+/* Tái sử dụng các button từ invoice.css */
+.order-item button {
+    margin-left: 15px;
+    padding: 8px 16px;
+    font-size: 1.4rem;
+}
+
+/* Tái sử dụng phong cách nút từ invoice.css/button.css */
+.view-detail-btn {
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+}
+
+.reorder-btn {
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid #afafaf;
+    border-radius: 6px;
+}
+
+.status-confirmed {
+    /* Tái sử dụng từ invoice.css */
+    color: green;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+/* === BẮT ĐẦU: CSS MỚI CHO CHI TIẾT ĐƠN HÀNG === */
+.order-details {
+    /* Mặc định ẩn */
+    display: none;
+
+    /* Styling thêm */
+    padding-top: 20px;
+    margin-top: 16px;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Khi .order-item có class 'expanded', HIỆN .order-details */
+.order-item.expanded .order-details {
+    display: block;
+}
+
+.order-details h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.order-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    font-size: 1.4rem;
+    border-bottom: 1px dotted #ccc;
+}
+
+.order-detail-item:last-of-type {
+    border-bottom: none;
+}
+
+.item-info .item-name {
+    font-weight: 600;
+}
+
+.item-info .item-quantity {
+    color: #555;
+    font-size: 1.3rem;
+    margin-top: 4px;
+}
+
+.item-price {
+    font-weight: 600;
+    min-width: 100px;
+    text-align: right;
+    font-size: 1.4rem;
+}
+
+.order-details-summary {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    max-width: 400px;
+    /* Giới hạn chiều rộng cho dễ đọc */
+    margin-left: auto;
+    /* Căn phải */
+}
+
+.order-details-summary p {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    font-size: 1.4rem;
+}
+
+.order-details-summary p span:first-child {
+    color: #555;
+}
+
+.order-details-summary p span:last-child {
+    font-weight: 600;
+}
+
+.order-details-summary p.discount span:last-child {
+    color: #e74c3c;
+}
+
+.order-details-summary p.total {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #000;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #ccc;
+}
+
+/* === KẾT THÚC: CSS MỚI CHO CHI TIẾT ĐƠN HÀNG === */
+
+
+/* Thiết kế cho tab Sổ Địa chỉ (dựa trên checkout.css) */
+.address-book {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.address-item-profile {
+    /* Tương tự address-item từ checkout.css nhưng không có radio button */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: var(--white);
+}
+
+/* Tái sử dụng .address-detail, .address-name, .address-line, .address-phone từ checkout.css */
+.address-item-profile .address-detail {
+    flex: 1;
+}
+
+.address-item-profile .address-name {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.default-badge {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+/* Tái sử dụng .button-groups từ checkout.css */
+.address-item-profile .button-groups img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.address-item-profile .button-groups img:hover {
+    opacity: 1;
+}
+
+.add-new-address-btn {
+    /* Tái sử dụng add-new-btn từ checkout.css */
+    width: 250px;
+    margin-top: 12px;
+    padding: 10px 16px;
+    border: 1px solid #afafaf;
+    border-radius: 6px;
+    background: var(--white);
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* Responsive cho Mobile */
+@media screen and (max-width: 768px) {
+    .profile-main {
+        padding: 20px 4.2%;
+        /* Padding cho mobile */
+        min-height: calc(100vh - 88px);
+    }
+
+    .profile-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 12px;
+    }
+
+    .profile-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        padding-right: 0;
+        padding-bottom: 16px;
+        /* Chuyển sidebar thành dạng cuộn ngang hoặc danh sách dọc tối giản */
+    }
+
+    .profile-sidebar h2 {
+        display: none;
+        /* Ẩn tiêu đề lớn trên mobile */
+    }
+
+    .profile-sidebar-nav {
+        display: flex;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 8px;
+    }
+
+    .profile-nav-item {
+        padding: 8px 12px;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+
+    .profile-content {
+        padding: 0;
+    }
+
+    .profile-tab .title {
+        font-size: 2.0rem;
+        margin-bottom: 16px;
+    }
+
+    .account-info-form {
+        max-width: 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .save-btn {
+        width: 100%;
+    }
+
+    /* === BẮT ĐẦU: SỬA ĐỔI RESPONSIVE CHO ORDER === */
+    .order-summary-view {
+        /* Thay vì .order-item */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* === KẾT THÚC: SỬA ĐỔI RESPONSIVE CHO ORDER === */
+
+    .order-item button {
+        width: calc(50% - 5px);
+        margin: 0;
+    }
+
+    .order-item .actions {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    /* === BẮT ĐẦU: THÊM RESPONSIVE CHO CHI TIẾT ORDER === */
+    .order-details-summary {
+        max-width: 100%;
+        /* Bỏ giới hạn chiều rộng */
+        margin-left: 0;
+    }
+
+    .order-detail-item {
+        flex-direction: column;
+        /* Cho item chi tiết xếp chồng */
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .item-price {
+        text-align: left;
+        width: 100%;
+    }
+
+    /* === KẾT THÚC: THÊM RESPONSIVE CHO CHI TIẾT ORDER === */
+
+    .address-item-profile {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    T .address-item-profile .button-groups {
+        align-self: flex-end;
+    }
+
+    .add-new-address-btn {
+        width: 100%;
+    }
+}

@@ -6,7 +6,9 @@
             "price": 549,
             "img": "iphone6.png",
             "category_id": 1,
-            "discount_percentage": 20
+            "discount_percentage": 20,
+            "rating": 4.3,
+            "sales": 2056
         },
         {
             "id": 19,
@@ -14,7 +16,9 @@
             "price": 649,
             "img": "iphone5.png",
             "category_id": 1,
-            "discount_percentage": 20
+            "discount_percentage": 20,
+            "rating": 4.5,
+            "sales": 2341
         },
         {
             "id": 18,
@@ -22,7 +26,9 @@
             "price": 749,
             "img": "iphone4.png",
             "category_id": 1,
-            "discount_percentage": 20
+            "discount_percentage": 20,
+            "rating": 4.7,
+            "sales": 2834
         },
         {
             "id": 17,
@@ -30,7 +36,9 @@
             "price": 1299,
             "img": "iphone3.png",
             "category_id": 1,
-            "discount_percentage": 15
+            "discount_percentage": 15,
+            "rating": 5.0,
+            "sales": 1890
         }
     ],
     "Bestseller": [
@@ -40,7 +48,9 @@
             "price": 999,
             "img": "iphone.png",
             "category_id": 1,
-            "discount_percentage": 0
+            "discount_percentage": 0,
+            "rating": 4.7,
+            "sales": 2272
         },
         {
             "id": 7,
@@ -48,7 +58,9 @@
             "price": 249,
             "img": "airpod.png",
             "category_id": 3,
-            "discount_percentage": 0
+            "discount_percentage": 0,
+            "rating": 4.7,
+            "sales": 5452
         },
         {
             "id": 6,
@@ -56,7 +68,9 @@
             "price": 1199,
             "img": "iphone2.png",
             "category_id": 1,
-            "discount_percentage": 0
+            "discount_percentage": 0,
+            "rating": 4.6,
+            "sales": 3923
         },
         {
             "id": 10,
@@ -64,7 +78,9 @@
             "price": 549,
             "img": "headphones.png",
             "category_id": 3,
-            "discount_percentage": 0
+            "discount_percentage": 0,
+            "rating": 4.4,
+            "sales": 3438
         }
     ],
     "Featured Products": [
@@ -74,7 +90,9 @@
             "price": 3899,
             "img": "camera.png",
             "category_id": 6,
-            "discount_percentage": 0
+            "discount_percentage": 0,
+            "rating": 4.9,
+            "sales": 152
         },
         {
             "id": 6,
@@ -82,7 +100,9 @@
             "price": 1199,
             "img": "iphone2.png",
             "category_id": 1,
-            "discount_percentage": 0
+            "discount_percentage": 0,
+            "rating": 4.6,
+            "sales": 1012
         },
         {
             "id": 12,
@@ -90,7 +110,9 @@
             "price": 1199,
             "img": "galaxyz.png",
             "category_id": 2,
-            "discount_percentage": 0
+            "discount_percentage": 0,
+            "rating": 4.6,
+            "sales": 765
         },
         {
             "id": 13,
@@ -98,7 +120,9 @@
             "price": 1299,
             "img": "iphone3.png",
             "category_id": 1,
-            "discount_percentage": 20
+            "discount_percentage": 20,
+            "rating": 5.0,
+            "sales": 2109
         }
     ],
     "Discount": [
@@ -108,7 +132,9 @@
             "price": 649,
             "img": "iphone5.png",
             "category_id": 1,
-            "discount_percentage": 30
+            "discount_percentage": 30,
+            "rating": 4.5,
+            "sales": 2588
         },
         {
             "id": 14,
@@ -116,7 +142,9 @@
             "price": 749,
             "img": "iphone4.png",
             "category_id": 1,
-            "discount_percentage": 25
+            "discount_percentage": 25,
+            "rating": 4.7,
+            "sales": 3015
         },
         {
             "id": 13,
@@ -124,7 +152,9 @@
             "price": 1299,
             "img": "iphone2.png",
             "category_id": 1,
-            "discount_percentage": 50
+            "discount_percentage": 50,
+            "rating": 4.2,
+            "sales": 810
         },
         {
             "id": 18,
@@ -132,7 +162,9 @@
             "price": 749,
             "img": "iphone11.png",
             "category_id": 1,
-            "discount_percentage": 20
+            "discount_percentage": 20,
+            "rating": 4.6,
+            "sales": 1530
         }
     ]
 }

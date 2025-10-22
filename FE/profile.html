@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Sơ Người Dùng</title>
+    <!-- Tải các tệp CSS đã cung cấp -->
+    <!-- Thêm reset.css và icon trong header theo file mẫu -->
+    <link rel="icon" href="img/logo_header.png" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/invoice.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <!-- Tải thư viện Font Awesome (dùng cho icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="grid p-relative">
+        <!-- HEADER (Đã đồng bộ với index.html) -->
+        <header class="flex">
+            <a href="index.html" class="logo">
+                <img src="img/logo_header.png" alt="logo">
+            </a>
+            <div class="search-group flex">
+                <img src="img/search_icon.png" alt="search-icon">
+                <input type="text" placeholder="Search">
+            </div>
+            <nav class="navlink-group">
+                <ul class="gap-32">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    <li><a href="products.html" class="nav-item">Products</a></li>
+                </ul>
+            </nav>
+            <div class="icon-group gap-24 flex">
+                <a href="cart.html" class="icon flex flex-center">
+                    <img src="img/cart-icon.png" />
+                    <div class="badge">1</div>
+                </a>
+                <!-- Thêm class active cho profile khi người dùng đang ở trang này -->
+                <div href="#" class="icon flex flex-center active" onclick="toggleUserBlock()">
+                    <img src="img/user-icon.png" />
+                    <div class="user_block">
+                        <div class="not_logged_in">
+                            <ul>
+                                <li><a href="login.html" class="">Log in</a></li>
+                                <li><a href="register.html" class="">Sign up</a></li>
+                            </ul>
+                        </div>
+                        <div class="logged_in">
+                            <ul>
+                                <li><a href="profile.html" class="">Profile</a></li>
+                                <li><a href="#" onclick="logout()">Log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <img src="img/menu-bar.png" alt="menu-icon" onclick="toggleMenu()">
+                <div class="badge">1</div>
+                <div class="mobile-menu flex-col">
+                    <div class="flex">
+                        <a href="index.html" class="logo">
+                            <img src="img/logo_header.png" alt="logo">
+                        </a>
+                        <div class="back-btn" onclick="toggleMenu()">&#60;</div>
+                    </div>
+
+                    <div class="search">
+                        <img src="img/search_icon.png" alt="search-icon">
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <ul class="nav-group gap-16 flex-col">
+                        <li>
+                            <a href="index.html" class="item gap-16">
+                                <div class="icon-image flex flex-center"><img src="img/home.png"></div>Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html" class="item gap-16">
+                                <div class="icon-image flex flex-center"><img src="img/product.png"></div>Products
+                            </a>
+                        </li>
+                        <li><a href="cart.html" class="item gap-16">
+                                <div class="icon-image flex flex-center"><img src="img/cart-icon.png"></div>Cart
+                                <div class="badge badge-mobile">1</div>
+                            </a></li>
+                        <li>
+                            <div href="#" class="item gap-16 account_mobile" onclick="toggleUserBlock()">
+                                <div class="icon-image flex flex-center"><img src="img/user-icon.png"></div>User
+                                <div class="arrow-account">&#129170;</div>
+                            </div>
+                        </li>
+                        <div class="user_block user_block_mobile">
+                            <div class="not_logged_in">
+                                <ul>
+                                    <li><a href="login.html" class="">Log in</a></li>
+                                    <li><a href="register.html" class="">Sign up</a></li>
+                                </ul>
+                            </div>
+                            <div class="logged_in">
+                                <ul>
+                                    <li><a href="profile.html" class="">Profile</a></li>
+                                    <li><a href="#" class="" onclick="logout()">Log out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ul>
+
+                    <div class="contact-us gap-16 flex flex-center">
+                        <a href="#"><img src="img/Twitter-menu.png" alt="Twitter"></a>
+                        <a href="#"><img src="img/facebook-menu.png" alt="Facebook"></a>
+                        <a href="#"><img src="img/Tiktok-menu.png" alt="Tiktok"></a>
+                        <a href="#"><img src="img/Instagram-menu.png" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT (Không đổi) -->
+        <!-- MAIN CONTENT (No changes) -->
+        <main class="profile-main flex justify-center items-start">
+            <div class="profile-container grid__full-width">
+
+                <!-- SIDEBAR MENU -->
+                <div class="profile-sidebar">
+                    <h2>My Account</h2>
+                    <div class="profile-sidebar-nav">
+                        <div class="profile-nav-item active" data-tab="account-info">
+                            <i class="fa-solid fa-user-gear"></i>
+                            <span>Account Information</span>
+                        </div>
+                        <div class="profile-nav-item" data-tab="order-history">
+                            <i class="fa-solid fa-receipt"></i>
+                            <span>Order History</span>
+                        </div>
+                        <div class="profile-nav-item" data-tab="address-book">
+                            <i class="fa-solid fa-address-book"></i>
+                            <span>Address Book</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTENT AREA -->
+                <div class="profile-content">
+
+                    <!-- 1. TAB: ACCOUNT INFORMATION -->
+                    <div id="account-info" class="profile-tab active">
+                        <h1 class="title">Account Information</h1>
+                        <div class="account-info-form">
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label for="full-name">Full Name</label>
+                                    <input type="text" id="full-name" value="Nguyễn Văn A">
+                                </div>
+                                <div class="input-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" value="nguyenvana@example.com" disabled>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label for="new-password">New Password</label>
+                                    <input type="password" id="new-password"
+                                        placeholder="Leave blank if you don't want to change">
+                                </div>
+                                <div class="input-group">
+                                    <label for="confirm-password">Confirm New Password</label>
+                                    <input type="password" id="confirm-password" placeholder="Re-enter new password">
+                                </div>
+                            </div>
+                            <button class="save-btn btn-fill-black"
+                                onclick="alert('This feature for changing information is not supported yet!')">Save
+                                Changes</button>
+                        </div>
+                    </div>
+
+                    <!-- 2. TAB: ORDER HISTORY/INVOICE -->
+                    <div id="order-history" class="profile-tab">
+                        <h1 class="title">Order History</h1>
+                        <div class="order-history-list">
+
+                            <!-- Order sample 1 -->
+                            <div class="order-item">
+                                <div class="order-info-group">
+                                    <p class="order-id">Order ID: <b>#ORD123456</b></p>
+                                    <p>Order Date: 20/10/2025</p>
+                                    <p>Total: <b>2,500,000 VND</b></p>
+                                    <p class="status-confirmed">Status: Confirmed</p>
+                                </div>
+                                <div class="actions">
+                                    <button class="view-detail-btn view-button">View Details</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <!-- 3. TAB: ADDRESS BOOK -->
+                    <div id="address-book" class="profile-tab">
+                        <h1 class="title">Address Book</h1>
+                        <div class="address-book">
+                            <div class="address-input">
+                                <div class="address-input-header">
+                                    <h3>Add New Address</h3>
+                                    <button class="close-address-input">&times;</button>
+                                </div>
+                                <div class="name-phone-group gap-16">
+                                    <div class="input-group">
+                                        <label for="name">Name:</label>
+                                        <input type="text" id="name" name="name" placeholder="Your Name">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="phone">Phone:</label>
+                                        <input type="text" id="phone" name="phone" placeholder="Your Phone Number">
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label for="address">Address:</label>
+                                    <input type="text" id="address" name="address" placeholder="Your Address">
+                                </div>
+                                <button class="save-address-btn">Save Address</button>
+                            </div>
+                            <!-- Address sample 1 (Default) -->
+                            <div class="address-item-profile">
+                                <div class="address-detail">
+                                    <p class="address-name">Nguyễn Văn A <span class="default-badge">Default</span></p>
+                                    <p class="address-phone">0987xxxxxx</p>
+                                    <p class="address-line">123 ABC Street, Ward 1, District 1, Ho Chi Minh City</p>
+                                </div>
+                                <div class="button-groups">
+                                    <img src="img/edit.png" alt="Edit">
+                                    <img src="img/delete.png" alt="Delete">
+                                </div>
+                            </div>
+
+                            <!-- Address sample 2 -->
+                            <div class="address-item-profile">
+                                <div class="address-detail">
+                                    <p class="address-name">Nguyễn Văn A (Office)</p>
+                                    <p class="address-phone">090xxxxxxx</p>
+                                    <p class="address-line">XYZ Building, Nguyễn Huệ Street, District 1, Ho Chi Minh
+                                        City</p>
+                                </div>
+                                <div class="button-groups">
+                                    <img src="img/edit.png" alt="Edit">
+                                    <img src="img/delete.png" alt="Delete">
+                                </div>
+                            </div>
+
+                            <button class="add-new-address-btn">
+                                <i class="fa-solid fa-plus" style="font-size: 1.2rem;"></i>
+                                Add New Address
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+
+        <!-- FOOTER (Đã đồng bộ với index.html) -->
+        <footer>
+            <div class="footer-content flex grid__full-width">
+                <div class="footer-col flex-col">
+                    <div class="footer-title">
+                        <img src="img/logo.png" alt="logo">
+                    </div>
+                    <p>We are a residential interior design firm located in Portland. Our boutique-studio offers more
+                        than
+                    </p>
+                </div>
+                <div class="footer-col flex-col">
+                    <div class="footer-title">Services</div>
+                    <ul>
+                        <li>Bonus program</li>
+                        <li>Gift cards</li>
+                        <li>Credit and payment</li>
+                        <li>Service contracts</li>
+                        <li>Non-cash account</li>
+                        <li>Payment</li>
+                    </ul>
+                </div>
+                <div class="footer-col flex-col">
+                    <div class="footer-title">Assistance to the buyer</div>
+                    <ul>
+                        <li>Find an order</li>
+                        <li>Terms of delivery</li>
+                        <li>Exchange and return of goods</li>
+                        <li>Guarantee</li>
+                        <li>Frequently asked questions</li>
+                        <li>Terms of use of the site</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/Tiktok.png" alt="Tiktok"></a>
+                <a href="#"><img src="img/Instagram.png" alt="Instagram"></a>
+
+            </div>
+        </footer>
+    </div>
+
+    <!-- JAVASCRIPT cho chức năng chuyển tab -->
+    <script src="js/header.js"> </script>
+    <script src="js/profile.js" type="module"> </script>
+
+</body>
+
+</html>

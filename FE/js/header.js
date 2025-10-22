@@ -1,69 +1,104 @@
-let isShow = false; // Biến trạng thái hiển thị của User.
-let isLoggedIn = false; // Biến trạng thái đăng nhập của User.
+let isShow = false; // Trạng thái hiển thị User menu
 
+// 🔹 Kiểm tra user trong localStorage để xác định trạng thái đăng nhập
+let isLoggedIn = !!localStorage.getItem('user');
+
+// ========================
+// ⚙️ Toggle menu user
+// ========================
 const toggleUserBlock = () => {
-    //Vì có nhiều thẻ user_block (ở cả header PC và trong Mobile Menu) nên dùng querySelectorAll.
     document.querySelectorAll(".user_block").forEach(user_block => {
         user_block.classList.toggle("show");
-        //Đổi mũi tên
-        document.querySelector(".arrow-account").innerHTML = isShow ? '&#129170;' : '&#129171;';
-    })
+    });
 
-    //Set lại biến trạng thái
+    // Đổi mũi tên hướng xuống/lên (nếu có)
+    const arrow = document.querySelector(".arrow-account");
+    if (arrow) arrow.innerHTML = isShow ? '&#129170;' : '&#129171;';
+
+    // Cập nhật trạng thái hiển thị
     isShow = !isShow;
 
-    //Chạy hàm kiểm tra đăng nhập ở dưới
+    // Cập nhật hiển thị login/logout
     checkLogin();
 };
 
+// ========================
+// 👤 Kiểm tra trạng thái đăng nhập
+// ========================
 const checkLogin = () => {
-    if (isLoggedIn) {
-        //Nếu đã đăng nhập thì ẩn các thẻ dành cho người chưa đăng nhập đi
-        document.querySelectorAll(".not_logged_in").forEach(block => {
-            block.style = 'display:none'
-        });
-    }
-    else {
-        //Ngược lại, ẩn các thẻ dành cho người đã đăng nhập đi
-        document.querySelectorAll(".logged_in").forEach(block => {
-            block.style = 'display:none'
-        });
-    }
-}
+    isLoggedIn = !!localStorage.getItem('user'); // cập nhật lại mỗi lần kiểm tra
 
-//Hàm cập nhật hiển thị badge giỏ hàng
+    if (isLoggedIn) {
+        // Nếu đã đăng nhập → ẩn phần chưa đăng nhập
+        document.querySelectorAll(".not_logged_in").forEach(block => {
+            block.style.display = 'none';
+        });
+
+        // Hiện phần đã đăng nhập
+        document.querySelectorAll(".logged_in").forEach(block => {
+            block.style.display = 'block';
+        });
+    } else {
+        // Nếu chưa đăng nhập → ẩn phần đã đăng nhập
+        document.querySelectorAll(".logged_in").forEach(block => {
+            block.style.display = 'none';
+        });
+
+        // Hiện phần chưa đăng nhập
+        document.querySelectorAll(".not_logged_in").forEach(block => {
+            block.style.display = 'block';
+        });
+    }
+};
+
+// ========================
+// 🛒 Cập nhật badge giỏ hàng
+// ========================
 const updateCartDisplay = () => {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartCount = cart.length;
 
     document.querySelectorAll(".badge").forEach(badge => {
         if (cartCount === 0) {
-            //Nếu giỏ hàng trong localStorage rỗng thì ẩn badge đi
             badge.style.display = 'none';
         } else {
-            //Ngược lại hiển thị badge và set innerHtml của badge = length của mảng cart trong localstorage
             badge.style.display = 'flex';
             badge.innerHTML = cartCount;
         }
     });
 };
 
-//Hàm logic xử lý khi click vào icon menu trên mobile
+// ========================
+// 📱 Menu Mobile Toggle
+// ========================
 const toggleMenu = () => {
-    document.querySelector(".mobile-menu")
-        .classList.toggle("menu-active");
+    document.querySelector(".mobile-menu")?.classList.toggle("menu-active");
 };
 
-// Gọi hàm kiểm tra đăng nhập khi trang web được tải
+// ========================
+// 🚀 Khi tải trang
+// ========================
 document.addEventListener("DOMContentLoaded", () => {
     checkLogin();
     updateCartDisplay();
 });
 
-// Ham này sẽ lắng nghe sự kiện thay đổi của 'localstorage' và nếu key thay đổi là 'cart' 
-// thì cập nhật hiển thị giỏ hàng khi có thay đổi (áp dụng cho tất cả mọi trang html).
-window.addEventListener('storage', function (event) {
+const logout = () => {
+    localStorage.removeItem('user');
+    alert('👋 Bạn đã đăng xuất.');
+    checkLogin(); // Cập nhật lại giao diện
+    window.location.href = 'index.html'; // Quay về trang chủ
+};
+
+
+// ========================
+// 🔄 Lắng nghe thay đổi giỏ hàng từ tab khác
+// ========================
+window.addEventListener('storage', (event) => {
     if (event.key === 'cart') {
         updateCartDisplay();
+    }
+    if (event.key === 'user') {
+        checkLogin(); // Nếu user thay đổi (đăng nhập / đăng xuất)
     }
 });

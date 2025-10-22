@@ -5,7 +5,9 @@
         "price": 999,
         "img": "iphone.png",
         "category_id": 1,
-        "discount_percentage": 0
+        "discount_percentage": 0,
+        "rating": 4.7,
+        "sales": 872
     },
     {
         "id": 2,
@@ -13,7 +15,9 @@
         "price": 398,
         "img": "ipad.png",
         "category_id": 4,
-        "discount_percentage": 0
+        "discount_percentage": 0,
+        "rating": 4.5,
+        "sales": 1205
     },
     {
         "id": 3,
@@ -21,7 +25,9 @@
         "price": 399,
         "img": "watch.png",
         "category_id": 5,
-        "discount_percentage": 0
+        "discount_percentage": 0,
+        "rating": 4.8,
+        "sales": 734
     },
     {
         "id": 4,
@@ -29,7 +35,9 @@
         "price": 399,
         "img": "watch.png",
         "category_id": 5,
-        "discount_percentage": 0
+        "discount_percentage": 0,
+        "rating": 4.8,
+        "sales": 691
     },
     {
         "id": 5,
@@ -37,7 +45,9 @@
         "price": 1099,
         "img": "iphone1.png",
         "category_id": 1,
-        "discount_percentage": 0
+        "discount_percentage": 0,
+        "rating": 4.9,
+        "sales": 1150
     },
     {
         "id": 6,
@@ -45,7 +55,9 @@
         "price": 1199,
         "img": "iphone2.png",
         "category_id": 1,
-        "discount_percentage": 0
+        "discount_percentage": 0,
+        "rating": 4.6,
+        "sales": 923
     },
     {
         "id": 7,
@@ -53,15 +65,19 @@
         "price": 249,
         "img": "airpod.png",
         "category_id": 3,
-        "discount_percentage": 0
+        "discount_percentage": 0,
+        "rating": 4.7,
+        "sales": 1452
     },
     {
         "id": 8,
-        "name": "Apple AirPods Pro (2nd Gen)",
-        "price": 249,
+        "name": "Apple AirPods Pro (3nd Gen)",
+        "price": 350,
         "img": "airpod.png",
         "category_id": 3,
-        "discount_percentage": 0
+        "discount_percentage": 0,
+        "rating": 4.7,
+        "sales": 1301
     },
     {
         "id": 9,
@@ -69,7 +85,9 @@
         "price": 3899,
         "img": "camera.png",
         "category_id": 6,
-        "discount_percentage": 0
+        "discount_percentage": 0,
+        "rating": 4.9,
+        "sales": 152
     },
     {
         "id": 10,
@@ -77,7 +95,9 @@
         "price": 549,
         "img": "headphones.png",
         "category_id": 3,
-        "discount_percentage": 0
+        "discount_percentage": 0,
+        "rating": 4.4,
+        "sales": 438
     },
     {
         "id": 11,
@@ -85,7 +105,9 @@
         "price": 329,
         "img": "samsungwatch.png",
         "category_id": 5,
-        "discount_percentage": 0
+        "discount_percentage": 0,
+        "rating": 4.3,
+        "sales": 889
     },
     {
         "id": 12,
@@ -93,7 +115,9 @@
         "price": 1199,
         "img": "galaxyz.png",
         "category_id": 2,
-        "discount_percentage": 0
+        "discount_percentage": 0,
+        "rating": 4.6,
+        "sales": 765
     },
     {
         "id": 13,
@@ -101,7 +125,9 @@
         "price": 1299,
         "img": "iphone3.png",
         "category_id": 1,
-        "discount_percentage": 20
+        "discount_percentage": 20,
+        "rating": 5.0,
+        "sales": 2109
     },
     {
         "id": 14,
@@ -109,7 +135,9 @@
         "price": 749,
         "img": "iphone4.png",
         "category_id": 1,
-        "discount_percentage": 25
+        "discount_percentage": 25,
+        "rating": 4.7,
+        "sales": 3015
     },
     {
         "id": 15,
@@ -117,7 +145,9 @@
         "price": 649,
         "img": "iphone5.png",
         "category_id": 1,
-        "discount_percentage": 30
+        "discount_percentage": 30,
+        "rating": 4.5,
+        "sales": 2588
     },
     {
         "id": 16,
@@ -125,7 +155,9 @@
         "price": 549,
         "img": "iphone6.png",
         "category_id": 1,
-        "discount_percentage": 15
+        "discount_percentage": 15,
+        "rating": 4.3,
+        "sales": 1943
     },
     {
         "id": 17,
@@ -133,15 +165,19 @@
         "price": 1299,
         "img": "iphone3.png",
         "category_id": 1,
-        "discount_percentage": 15
+        "discount_percentage": 15,
+        "rating": 5.0,
+        "sales": 1890
     },
     {
         "id": 18,
         "name": "iPhone 13 128GB",
         "price": 749,
-        "img": "iphone4.png",
+        "img": "iphone11.png",
         "category_id": 1,
-        "discount_percentage": 20
+        "discount_percentage": 20,
+        "rating": 4.7,
+        "sales": 2834
     },
     {
         "id": 19,
@@ -149,7 +185,9 @@
         "price": 649,
         "img": "iphone5.png",
         "category_id": 1,
-        "discount_percentage": 20
+        "discount_percentage": 20,
+        "rating": 4.5,
+        "sales": 2341
     },
     {
         "id": 20,
@@ -157,6 +195,8 @@
         "price": 549,
         "img": "iphone6.png",
         "category_id": 1,
-        "discount_percentage": 20
+        "discount_percentage": 20,
+        "rating": 4.3,
+        "sales": 2056
     }
 ]

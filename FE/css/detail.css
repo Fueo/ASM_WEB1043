@@ -35,6 +35,32 @@
     width: 100%;
 }
 
+.detail-stats {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    /* Khoảng cách giữa rating và sales */
+    margin-top: 12px;
+    /* Khoảng cách với giá */
+    font-size: 1.5rem;
+    /* Cỡ chữ */
+}
+
+.detail-rating {
+    font-weight: 600;
+    color: #333;
+    /* Màu chữ chính */
+}
+
+.detail-sales {
+    color: #666;
+    /* Màu nhạt hơn */
+    font-weight: 500;
+    padding-left: 16px;
+    border-left: 1px solid #ddd;
+    /* Dấu gạch phân cách */
+}
+
 .detail-imgs {
     width: 40%;
     /* Adjust as needed */
@@ -75,11 +101,9 @@
     margin-bottom: 24px;
 }
 
-.detail-content .price {
-    margin-bottom: 20px;
-}
 
 .detail-content .current-price {
+    margin-left: 10px;
     font-size: 3.2rem;
     font-weight: bold;
     color: var(--black);
@@ -301,9 +325,10 @@
 }
 
 .detail-info-row {
-    display: flex;
-    justify-content: space-between;
+    margin-bottom: 8px;
     padding: 8px 0;
+    align-content: center;
+    justify-content: space-between;
     border-bottom: 1px solid #eee;
 }
 
@@ -401,46 +426,6 @@
     cursor: pointer;
 }
 
-.product-card .image img {
-    width: 160px;
-    height: 160px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-}
-
-.product-tabs .product-grid .product-card .fav-btn:hover {
-    opacity: 100%;
-    transition: all 0.3s ease-in-out;
-}
-
-.product-tabs .product-grid .product-card .product-title {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    font-weight: 500;
-    text-align: center;
-    color: var(--black);
-}
-
-.product-tabs .product-grid .product-card .product-price {
-    font-size: 2.4rem;
-    line-height: 2.4rem;
-    font-weight: 600;
-    text-align: center;
-    color: var(--black);
-    display: flex;
-    flex-direction: column;
-}
-
-.product-tabs .product-grid .product-card .old-price {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    font-weight: 400;
-    text-align: center;
-    color: #6c757d;
-    text-decoration: line-through;
-    margin-top: 4px;
-}
 
 @media screen and (max-width: 768px) {
     .breadcrumb {
@@ -541,8 +526,6 @@
         line-height: 2.2rem;
         margin-top: 24px;
     }
-
-    .detail-info-row {}
 
     .product-tabs .product-grid .product-card {
         width: calc(50% - 16px);

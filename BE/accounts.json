@@ -1,16 +1,44 @@
 [
-    {
-        "id": 1,
-        "name": "admin",
-        "email": "admin@estore.com",
-        "password": "admin123",
-        "role": 1
-    },
-    {
-        "id": 2,
-        "name": "user",
-        "email": "user@estore.com",
-        "password": "user123",
-        "role": 2
-    }
+  {
+    "id": 1,
+    "name": "admin",
+    "email": "admin@estore.com",
+    "password": "admin123",
+    "role": 1,
+    "address": [
+      {
+        "name": "Alex Johnson (Home)",
+        "phone": "0123456789",
+        "addressLine": "123 Main St, City, Country",
+        "isDefault": true
+      },
+      {
+        "name": "Alex Johnson (Office)",
+        "phone": "0987654321",
+        "addressLine": "456 Office Rd, City, Country",
+        "isDefault": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "user",
+    "email": "user@estore.com",
+    "password": "user123",
+    "role": 2
+  },
+  {
+    "name": "123",
+    "email": "123@gmail.com",
+    "password": "123456",
+    "role": 2,
+    "id": 3
+  },
+  {
+    "name": "123",
+    "email": "haogogo123@gmail.com",
+    "password": "123456",
+    "role": 2,
+    "id": 4
+  }
 ]

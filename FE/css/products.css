@@ -67,7 +67,8 @@
     margin-top: 12px;
 }
 
-.sidebar-list li {
+.sidebar-list li,
+.price-filter span {
     margin-bottom: 8px;
     font-size: 1.5rem;
     color: #0f0f0f;
@@ -153,6 +154,30 @@
     opacity: 0.6;
 }
 
+
+#price-slider {
+    width: 100%;
+    height: 7px;
+    margin-top: 10px;
+    -webkit-appearance: none;
+    /* Xóa style mặc định trên Chrome/Safari */
+    background: #cecece;
+    /* Màu thanh */
+    border-radius: 4px;
+    outline: none;
+}
+
+/* --- Nút kéo (thumb) trên Chrome, Edge, Safari --- */
+#price-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    background: var(--black);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
 .sort-group {
     position: relative;
     display: flex;
@@ -185,6 +210,7 @@
 }
 
 .product-card {
+    position: relative;
     background: #fafafa;
     border-radius: 16px;
     box-shadow: 0 2px 8px #eee;
@@ -258,6 +284,36 @@
     line-height: 2.4rem;
     font-weight: 600;
     color: var(--black);
+}
+
+.sales-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--black);
+    /* Dùng màu đen chủ đạo */
+    color: var(--white);
+    padding: 4px 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    /* Bo góc cho đẹp, khớp với bo góc 0.9rem của card */
+    border-top-left-radius: 0.9rem;
+    border-bottom-right-radius: 0.9rem;
+
+    /* Đảm bảo nó luôn ở trên cùng */
+    z-index: 2;
+}
+
+/* 2. Định dạng cho Rating (nằm dưới giá) */
+.product-rating {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #333;
+    /* Màu chữ tối, không quá nổi bật */
+    text-align: center;
+    margin: 10px 0;
+    /* Tạo khoảng cách với giá */
 }
 
 .btn-buy {
